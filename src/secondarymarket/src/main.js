@@ -20,7 +20,8 @@ import {
   Grid, 
   GridItem,
   Col, 
-  Row
+  Row,
+  TreeSelect
 } from 'vant';
 Vue.use(Icon)
   .use(Tabbar)
@@ -30,7 +31,8 @@ Vue.use(Icon)
   .use(Grid)
   .use(GridItem)
   .use(Col)
-  .use(Row);
+  .use(Row)
+  .use(TreeSelect);
 
 //使用axios
 import axios from 'axios';

@@ -4,6 +4,13 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     routes: [{
+        path: '/',
+        redirect: '/index',
+        meta: {
+            title: '首页',
+            requireAuth: false
+        },
+    },{
         name: 'index',
         path: '/index',
         meta: {
