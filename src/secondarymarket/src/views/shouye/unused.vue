@@ -1,12 +1,12 @@
 <template>
-    <div class="cart">
-
+    <div class="unused">
+        卖闲置
     </div>
 </template>
 <script>
 
 export default {
-    name: 'cart',
+    name: 'unused',
     data() {
         return {
 

@@ -4,53 +4,72 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     routes: [{
-        path: '/',
-        redirect: '/index',
-        meta: {
-            title: '首页',
-            requireAuth: false
-        },
-    },{
         name: 'index',
         path: '/index',
+        redirect: '/shouye',
         meta: {
             title: '首页',
-            requireAuth: false
+            requreAuth: false
         },
         component: () => import('@/views/index'),
+        children: [{
+            name: 'shouye',
+            path: '/shouye',
+            meta: {
+                title: '首页',
+                requireAuth: false
+            },
+            component: () => import('@/views/shouye/index'),
+        },{
+            name: 'classify',
+            path: '/classify',
+            meta: {
+                title: '分类页',
+                requireAuth: false
+            },
+            component: () => import('@/views/shouye/classify'),
+        },{
+            name: 'unused',
+            path: '/unused',
+            meta: {
+                title: '卖闲置',
+                requireAuth: false
+            },
+            component: () => import('@/views/shouye/unused'),
+        },{
+            name: 'cart',
+            path: '/cart',
+            meta: {
+                title: '购物车',
+                requireAuth: false
+            },
+            component: () => import('@/views/shouye/cart'),
+        },{
+            name: 'mine',
+            path: '/mine',
+            meta: {
+                title: '我的',
+                requireAuth: false
+            },
+            component: () => import('@/views/shouye/mine'),
+        }]
     },{
-        name: 'classify',
-        path: '/classify',
+        name: 'goodsList',
+        path: '/goodsList/:id',
         meta: {
-            title: '分类页',
+            title: '商品列表',
             requireAuth: false
         },
-        component: () => import('@/views/classify'),
+        component: () => import('@/views/goodsList'),
     },{
-        name: 'unused',
-        path: '/unused',
+        name: 'goodDetail',
+        path: '/goodDetail/:id',
         meta: {
-            title: '卖闲置',
+            title: '商品详情',
             requireAuth: false
         },
-        component: () => import('@/views/unused'),
-    },{
-        name: 'cart',
-        path: '/cart',
-        meta: {
-            title: '购物车',
-            requireAuth: false
-        },
-        component: () => import('@/views/cart'),
-    },{
-        name: 'mine',
-        path: '/mine',
-        meta: {
-            title: '我的',
-            requireAuth: false
-        },
-        component: () => import('@/views/mine'),
-    }]
+        component: () => import('@/views/goodDetail'),
+    },]
 })
 
 export default router;

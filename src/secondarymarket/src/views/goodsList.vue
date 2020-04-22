@@ -1,12 +1,12 @@
 <template>
-    <div class="unused">
-
+    <div class="goodsList">
+        商品列表
     </div>
 </template>
 <script>
 
 export default {
-    name: 'unused',
+    name: 'goodsList',
     data() {
         return {
 
