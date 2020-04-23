@@ -21,7 +21,18 @@ import {
   GridItem,
   Col, 
   Row,
-  TreeSelect
+  TreeSelect,
+  NavBar,
+  Search,
+  Lazyload,
+  DropdownMenu, 
+  DropdownItem,
+  Collapse, 
+  CollapseItem,
+  Form,
+  Field,
+  Cell, 
+  CellGroup
 } from 'vant';
 Vue.use(Icon)
   .use(Tabbar)
@@ -32,7 +43,20 @@ Vue.use(Icon)
   .use(GridItem)
   .use(Col)
   .use(Row)
-  .use(TreeSelect);
+  .use(TreeSelect)
+  .use(Search)
+  .use(NavBar)
+  .use(DropdownMenu)
+  .use(DropdownItem)
+  .use(Collapse)
+  .use(CollapseItem)
+  .use(Form)
+  .use(Field)
+  .use(Cell)
+  .use(CellGroup)
+  .use(Lazyload,{
+    lazyComponent: true,
+  });
 
 //使用axios
 import axios from 'axios';

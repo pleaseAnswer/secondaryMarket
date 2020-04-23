@@ -55,7 +55,7 @@ const router = new VueRouter({
         }]
     },{
         name: 'goodsList',
-        path: '/goodsList/:id',
+        path: '/goodsList',
         meta: {
             title: '商品列表',
             requireAuth: false
@@ -63,12 +63,20 @@ const router = new VueRouter({
         component: () => import('@/views/goodsList'),
     },{
         name: 'goodDetail',
-        path: '/goodDetail/:id',
+        path: '/goodDetail',
         meta: {
             title: '商品详情',
             requireAuth: false
         },
         component: () => import('@/views/goodDetail'),
+    },{
+        name: 'sellers',
+        path: '/sellers',
+        meta: {
+            title: '卖家信息',
+            requireAuth: false
+        },
+        component: () => import('@/views/sellers'),
     },]
 })
 

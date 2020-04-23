@@ -4,7 +4,7 @@
             <template #content>
                 <!-- <van-image v-if="active === 0" src="https://img.yzcdn.cn/vant/apple-1.jpg"/> -->
                 <van-grid :column-num="3" v-if="active === 0" :gutter="10" :border='false'>
-                    <van-grid-item v-for="value in 5" :key="value" icon="photo-o" text="文字" style="background:#369"/>
+                    <van-grid-item v-for="value in 5" :key="value" icon="photo-o" text="文字" style="background:#369" @click="goto(value)"/>
                 </van-grid>
                 <van-image v-if="active === 1" src="https://img.yzcdn.cn/vant/apple-2.jpg"
     />
@@ -23,6 +23,11 @@ export default {
                 ],
             // activeId: 1,
             active: 0,
+        }
+    },
+    methods: {
+        goto(id) {
+            this.$router.push({ name: 'goodsList', params: {id} })
         }
     },
 }
