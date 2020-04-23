@@ -77,6 +77,14 @@ const router = new VueRouter({
             requireAuth: false
         },
         component: () => import('@/views/sellers'),
+    },{
+        name: 'conection',
+        path: '/conection',
+        meta: {
+            title: '聊天',
+            requireAuth: false
+        },
+        component: () => import('@/views/conection'),
     },]
 })
 

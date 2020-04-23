@@ -41,6 +41,9 @@
                 </div>
             </van-collapse-item>
         </van-collapse>
+        <div class="goodDetail-conection" @click="gotoConection">
+            <van-icon name="comment-o" size="30" color="#369"/>
+        </div>
     </div>
 </template>
 <script>
@@ -67,7 +70,11 @@ export default {
         gotoMsg(id) {
             console.log('卖家消息');
             this.$router.push({name:'sellers',params:{id}})
-        }
+        },
+        gotoConection() {
+            console.log('聊天');
+            this.$router.push({name: 'conection'}) 
+        },
     },
 }
 </script>
@@ -140,6 +147,19 @@ export default {
             width: 100%;
             padding: vw(10) 0;
         }
+    }
+    .goodDetail-conection {
+        width: vw(100);
+        height: vw(100);
+        border-radius: 50%;
+        border: 1px solid #369;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: vw(200);
+        right: vw(20);
+        z-index: 10000;
     }
 }
 </style>
