@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     routes: [{
         name: 'index',
-        path: '/index',
+        path: '/',
         redirect: '/shouye',
         meta: {
             title: '首页',
