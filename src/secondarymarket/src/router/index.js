@@ -52,6 +52,47 @@ const router = new VueRouter({
                 requireAuth: false
             },
             component: () => import('@/views/shouye/mine'),
+            children: [{
+                name: 'isSelled',
+                path: '/isSelled',
+                meta: {
+                    title: '已卖',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/isSelled'),
+            },{
+                name: 'isBuyed',
+                path: '/isBuyed',
+                meta: {
+                    title: '已买',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/isBuyed'),
+            },{
+                name: 'selledNow',
+                path: '/selledNow',
+                meta: {
+                    title: '正在售卖',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/selledNow'),
+            },{
+                name: 'changeNow',
+                path: '/changeNow',
+                meta: {
+                    title: '正在交易',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/changeNow'),
+            },{
+                name: 'editSellMsg',
+                path: '/editSellMsg',
+                meta: {
+                    title: '编辑商品信息',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/editSellMsg'),
+            }]
         }]
     },{
         name: 'goodsList',
@@ -85,6 +126,22 @@ const router = new VueRouter({
             requireAuth: false
         },
         component: () => import('@/views/conection'),
+    },{
+        name: 'login',
+        path: '/login',
+        meta: {
+            title: '登录页',
+            requireAuth: false
+        },
+        component: () => import('@/views/login')
+    },{
+        name: 'pingLun',
+        path: '/pingLun',
+        meta: {
+            title: '评论页',
+            requireAuth: false
+        },
+        component: () => import('@/views/pingLun')
     },]
 })
 

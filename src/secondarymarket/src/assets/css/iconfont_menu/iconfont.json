@@ -6,11 +6,39 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1368557",
+      "name": "闲置",
+      "font_class": "lie-b",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "3522452",
       "name": "图书",
       "font_class": "tushu",
       "unicode": "e608",
       "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "4889667",
+      "name": "交易",
+      "font_class": "jiaoyi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "4889717",
+      "name": "买入",
+      "font_class": "mairu",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "4889728",
+      "name": "卖出",
+      "font_class": "maichu",
+      "unicode": "e618",
+      "unicode_decimal": 58904
     },
     {
       "icon_id": "5163699",

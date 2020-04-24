@@ -25,7 +25,10 @@
                             <i class="list-text">肖申克的救赎</i>
                             <i class="list-text-new">九成新</i>
                         </p>
-                        <p class="list-text-price">￥20.00</p>
+                        <p>
+                            <i class="list-text-where">东区</i>
+                            <i class="list-text-price">￥20.00</i>
+                        </p>
                     </figcaption>
                 </figure>
             </div>
@@ -95,16 +98,22 @@ export default {
         line-height: vw(36);
         color: #666;
         padding: vw(10);
-        .list-text {
-            font-size: vw(28);
-            color: #333;
-        }
-        .list-text-new {
-            padding: 0 vw(10);
-        }
-        .list-text-price {
-            text-align: right;
-            color: #c55;
+        p{
+            .list-text {
+                font-size: vw(28);
+                color: #333;
+                font-weight: bold;
+            }
+            .list-text-new {
+                padding: 0 vw(10);
+            }
+            .list-text-where {
+                float: left;
+            }
+            .list-text-price {
+                float: right;
+                color: #c55;
+            }
         }
     }
 }

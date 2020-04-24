@@ -1,5 +1,8 @@
 <template>
     <div class="shouye">
+        <header class="header">
+            <p>海大交易</p>
+        </header>
         <section class="banner">
             <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
                 <van-swipe-item>
@@ -110,6 +113,24 @@ export default {
     width: 100%;
     height: 100%;
     background: #ccc;
+}
+.header {
+    width: 100%;
+    height: 55px;
+    background: rgb(67,120,186);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    p {
+      text-align: center;
+      color: #fff;
+      font-size: vw(48);
+      line-height: vw(110);
+    }
+}
+.banner {
+    padding-top: vw(112);
 }
 .my-swipe .van-swipe-item {
     img {

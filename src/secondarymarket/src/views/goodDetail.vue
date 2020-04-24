@@ -26,6 +26,9 @@
                 <p class="nameText">
                     卖家：<span class="text-sell" @click="gotoMsg(1)">{{sellPeaple}}</span>
                 </p>
+                <p class="addressText">
+                    卖家所在：<span class="text-sell">{{sellAddress}}</span>
+                </p>
             </div>
         </div>
         <van-collapse v-model="activeNames">
@@ -56,6 +59,7 @@ export default {
             isShixing: false,
             sellReason: '毕业季',
             sellPeaple: '张**',
+            sellAddress: '东区海韵',
             activeNames: ['1'],
         }
     },
@@ -124,7 +128,7 @@ export default {
                 right: 0;
             }
         }
-        .reasonText, .nameText {
+        .reasonText, .nameText, .addressText {
             height: vw(36);
             font-size: vw(32);
             line-height: vw(36);

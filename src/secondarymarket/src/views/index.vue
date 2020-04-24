@@ -1,8 +1,5 @@
 <template>
   <div class="container">
-    <header class="header">
-      <p>海大交易</p>
-    </header>
     <main class="main">
       <router-view />
     </main>
@@ -16,7 +13,7 @@
         <van-tabbar-item icon="wap-home-o" to="/shouye">首页</van-tabbar-item>
         <van-tabbar-item icon="qr" to="/classify">分类</van-tabbar-item>
         <van-tabbar-item icon="gold-coin-o" to="/unused">卖闲置</van-tabbar-item>
-        <van-tabbar-item icon="shopping-cart-o" to="/cart" :info="cartlength">购物车</van-tabbar-item>
+        <van-tabbar-item icon="like-o" to="/cart" :info="cartlength">我的收藏</van-tabbar-item>
         <van-tabbar-item icon="user-o" to="/mine">我的</van-tabbar-item>
       </van-tabbar>
     </footer>
@@ -44,17 +41,6 @@ export default {
   width: 100%;
   height: 100%;
   color: #666;
-  .header {
-    width: 100%;
-    height: 55px;
-    background: rgb(67,120,186);
-    p {
-      text-align: center;
-      color: #fff;
-      font-size: vw(48);
-      line-height: vw(110);
-    }
-  }
   .main {
     padding-bottom: vw(112);
   }

@@ -33,7 +33,13 @@ import {
   Field,
   Cell, 
   CellGroup,
-  Rate
+  Rate,
+  SwipeCell,
+  Button,
+  Card,
+  Uploader,
+  Tab,
+  Tabs
 } from 'vant';
 Vue.use(Icon)
   .use(Tabbar)
@@ -56,6 +62,12 @@ Vue.use(Icon)
   .use(Cell)
   .use(CellGroup)
   .use(Rate)
+  .use(SwipeCell)
+  .use(Button)
+  .use(Card)
+  .use(Uploader)
+  .use(Tab)
+  .use(Tabs)
   .use(Lazyload,{
     lazyComponent: true,
   });
