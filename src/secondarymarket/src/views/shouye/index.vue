@@ -5,6 +5,11 @@
         </header>
         <section class="banner">
             <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+                <van-swipe-item v-for="item in lunboList" :key="item.id">
+                    <img src="@/assets/img/yaoyao.jpg" alt="">
+                </van-swipe-item>
+            </van-swipe>
+            <!-- <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
                 <van-swipe-item>
                     <img src="@/assets/img/yaoyao.jpg" alt="">
                 </van-swipe-item>
@@ -17,7 +22,7 @@
                 <van-swipe-item>
                     <img src="@/assets/img/zhongqu.png" alt="">
                 </van-swipe-item>
-            </van-swipe>
+            </van-swipe> -->
         </section>
         <section class="menu">
             <van-grid :gutter="10" :border='false' :column-num="4">
@@ -40,50 +45,10 @@
             </van-grid>
         </section>
         <section class="recommend">
-            <section>
-                <p class="recommend-text">- 图书 -</p>
+            <section v-for="item in commitList" :key="item.id">
+                <p class="recommend-text">-----{{item.title}}-----</p>
                 <van-row gutter="20">
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                </van-row>
-            </section>
-            <section>
-                <p class="recommend-text">- 百货 -</p>
-                <van-row gutter="20">
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
-                        <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
-                        </div>
-                    </van-col>
-                    <van-col span="6">
+                    <van-col span="6" v-for="ele in item.list" :key="ele.id">
                         <div class="recommend-item">
                             <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
                         </div>
@@ -99,7 +64,84 @@ export default {
     name: 'shouye',
     data() {
         return {
-
+            lunboList: [{
+                id: 1,
+                imgUrl: '@/assets/img/yaoyao.jpg',
+            },{
+                id: 2,
+                imgUrl: '@/assets/img/dongqu.png',
+            },{
+                id: 3,
+                imgUrl: '@/assets/img/xiqu.jpg',
+            },{
+                id: 4,
+                imgUrl: '@/assets/img/zhongqu.jpg',
+            }],
+            commitList: [{
+                id: 1,
+                title: '图书',
+                list: [{
+                    id: 11,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 12,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 13,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 14,
+                    img: '@/assets/img/book_1.png'
+                }]
+            },{
+                id: 2,
+                title: '生活百货',
+                list: [{
+                    id: 21,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 22,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 23,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 24,
+                    img: '@/assets/img/book_1.png'
+                }]
+            },{
+                id: 3,
+                title: '饰品',
+                list: [{
+                    id: 31,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 32,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 33,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 34,
+                    img: '@/assets/img/book_1.png'
+                }]
+            },{
+                id: 4,
+                title: '食物',
+                list: [{
+                    id: 41,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 42,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 43,
+                    img: '@/assets/img/book_1.png'
+                },{
+                    id: 44,
+                    img: '@/assets/img/book_1.png'
+                }]
+            },]
         }
     },
 }
@@ -158,6 +200,6 @@ export default {
     line-height: vw(28);
     font-size: vw(28);
     text-align: center;
-    padding: vw(20);
+    padding: vw(40);
 }
 </style>

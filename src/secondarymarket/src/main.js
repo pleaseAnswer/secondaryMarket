@@ -39,7 +39,8 @@ import {
   Card,
   Uploader,
   Tab,
-  Tabs
+  Tabs,
+  Image as VanImage
 } from 'vant';
 Vue.use(Icon)
   .use(Tabbar)
@@ -68,6 +69,7 @@ Vue.use(Icon)
   .use(Uploader)
   .use(Tab)
   .use(Tabs)
+  .use(VanImage)
   .use(Lazyload,{
     lazyComponent: true,
   });

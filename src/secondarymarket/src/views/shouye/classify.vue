@@ -4,13 +4,48 @@
             <p>分类页</p>
         </header>
         <div class="classify-main">
-            <van-tree-select height="55vw" :items="items" :main-active-index.sync="active">
+            <van-tree-select height="100vw" :items="items" :main-active-index.sync="active">
                 <template #content>
-                    <!-- <van-image v-if="active === 0" src="https://img.yzcdn.cn/vant/apple-1.jpg"/> -->
-                    <van-grid :column-num="3" v-if="active === 0" :gutter="10" :border='false'>
-                        <van-grid-item v-for="value in 5" :key="value" icon="photo-o" text="文字" style="background:#369" @click="goto(value)"/>
-                    </van-grid>
-                    <van-image v-if="active === 1" src="https://img.yzcdn.cn/vant/apple-2.jpg" />
+                    <div class="classify-main-content" v-if="active === 0">
+                        <van-row>
+                            <van-col span="8" v-for="item in bookList" :key="item.id">
+                                <article @click="goto(item.id)">
+                                    <img :src="item.imgUrl" alt="">
+                                    <p>{{item.text}}</p>
+                                </article>
+                            </van-col>
+                        </van-row>
+                    </div>
+                    <div class="classify-main-content" v-if="active === 1">
+                        <van-row>
+                            <van-col span="8" v-for="item in baihuoList" :key="item.id">
+                                <article @click="goto(item.id)">
+                                    <img :src="item.imgUrl" alt="">
+                                    <p>{{item.text}}</p>
+                                </article>
+                            </van-col>
+                        </van-row>
+                    </div>
+                    <div class="classify-main-content" v-if="active === 2">
+                        <van-row>
+                            <van-col span="8" v-for="item in shipinList" :key="item.id">
+                                <article @click="goto(item.id)">
+                                    <img :src="item.imgUrl" alt="">
+                                    <p>{{item.text}}</p>
+                                </article>
+                            </van-col>
+                        </van-row>
+                    </div>
+                    <div class="classify-main-content" v-if="active === 3">
+                        <van-row>
+                            <van-col span="8" v-for="item in shiwuList" :key="item.id">
+                                <article @click="goto(item.id)">
+                                    <img :src="item.imgUrl" alt="">
+                                    <p>{{item.text}}</p>
+                                </article>
+                            </van-col>
+                        </van-row>
+                    </div>
                 </template>
             </van-tree-select>
         </div>
@@ -22,11 +57,118 @@ export default {
     name: 'classify',
     data() {
         return {
-            items: [{ text: '图书', children: [], dot: true },
-                    { text: '生活百货', children: [{text: '教科书'},{text: '等级资料'}], badge: 5 }
+            items: [
+                { text: '图书', children: []},
+                { text: '生活百货', children: []},
+                { text: '饰品', children: []},
+                { text: '食物', children: []},
                 ],
             // activeId: 1,
             active: 0,
+            bookList: [{
+                id: 1,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '教科书',
+            },{
+                id: 2,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '考级资料',
+            },{
+                id: 3,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '名著',
+            },{
+                id: 4,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '笔记本',
+            },{
+                id: 5,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '其他',
+            }],
+            baihuoList: [{
+                id: 1,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '衣服',
+            },{
+                id: 2,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '电器',
+            },{
+                id: 3,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '文具',
+            },{
+                id: 4,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '纸巾',
+            },{
+                id: 5,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '餐具',
+            },{
+                id: 6,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '洗护用品',
+            },{
+                id: 7,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '其他',
+            }],
+            shipinList: [{
+                id: 1,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '收纳盒',
+            },{
+                id: 2,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '盆景',
+            },{
+                id: 3,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '首饰',
+            },{
+                id: 4,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '帽子',
+            },{
+                id: 5,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '围巾',
+            },{
+                id: 6,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '摆件',
+            },{
+                id: 7,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '其他',
+            }],
+            shiwuList: [{
+                id: 1,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '五谷',
+            },{
+                id: 2,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '调味',
+            },{
+                id: 3,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '饮料',
+            },{
+                id: 4,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '零食',
+            },{
+                id: 5,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '奶粉',
+            },{
+                id: 6,
+                imgUrl: 'https://img.yzcdn.cn/vant/apple-2.jpg',
+                text: '其他'
+            }],
         }
     },
     methods: {
@@ -57,5 +199,30 @@ export default {
 }
 .classify-main {
     padding-top: vw(112);
+    width: 100%;
+    .classify-main-content {
+        article {
+            width: 90%;
+            box-sizing: border-box;
+            margin: 5% 0;
+            padding: 5%;
+            border: 1px solid #58bc;
+        }
+        img {
+            width: 100%;
+            height: vw(100);
+            padding-top: vw(10);
+            padding-bottom: vw(10);
+            border: 1px solid #58bc;
+        }
+        p {
+            height: vw(34);
+            font-size: vw(28);
+            line-height: vw(34);
+            text-align: center;
+            color: #58bc;
+            font-weight: bold;
+        }
+    }
 }
 </style>

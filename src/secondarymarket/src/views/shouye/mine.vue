@@ -53,7 +53,7 @@ export default {
     name: 'mine',
     data() {
         return {
-            isUnLogin: true,
+            isUnLogin: false,
             mineName: '张**',
             mineAddress: '东区海韵',
             mineNum: 201611921835,
@@ -66,7 +66,15 @@ export default {
             oIndex: 1,
         }
     },
+    created: {
+        
+    },
     methods: {
+        gotoYimai() {
+            if(!this.isUnLogin) {
+                this.$router.push({name: 'isBuyed', params: {id: 1}})
+            }
+        },
         gotoLogin() {
             this.$router.push({name:'login'})
         },

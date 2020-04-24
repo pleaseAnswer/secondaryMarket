@@ -142,6 +142,14 @@ const router = new VueRouter({
             requireAuth: false
         },
         component: () => import('@/views/pingLun')
+    },{
+        name: 'forgetmm',
+        path: '/forgetmm',
+        meta: {
+            title: '忘记密码',
+            requireAuth: false
+        },
+        component: () => import('@/views/forgetmm')
     },]
 })
 
