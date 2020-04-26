@@ -1,4 +1,5 @@
 <template>
+<!-- 分类页 -->
     <div class="classify">
         <header class="header">
             <p>分类页</p>
@@ -52,7 +53,7 @@
     </div>
 </template>
 <script>
-
+import Base from '@/config/base';
 export default {
     name: 'classify',
     data() {
@@ -171,9 +172,28 @@ export default {
             }],
         }
     },
+    created() {
+        this.getList();
+    },
     methods: {
         goto(id) {
             this.$router.push({ name: 'goodsList', params: {id} })
+        },
+        getList() {
+            // console.log(Base.prefixUrl);
+            
+            let url = Base.prefixUrl + '/classify';
+            try{
+                this.$axios.get(url)
+                .then( res => {
+                    console.log('res',res);
+                })
+                .catch( error => {
+                    console.log('error', error);
+                })
+            } catch(error) {
+                console.log('error', error);
+            }
         }
     },
 }

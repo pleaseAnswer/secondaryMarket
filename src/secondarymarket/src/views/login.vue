@@ -31,7 +31,7 @@
                                 </template>
                             </van-field>
                             <van-field v-model="signIn.password" clearable type="password" name="密码" label="密码" placeholder="请输入密码" :rules="[{ required: true, message: '请输入密码' }]" />
-                            <van-field v-model="signIn.password2" clearable type="password" name="密码" label="密码" placeholder="请再次输入密码" :rules="[{ required: true, message: '请再次输入密码' }]" />
+                            <van-field v-model="signIn.password2" clearable type="password" name="确认密码" label="确认密码" placeholder="请再次输入密码" :rules="[{ required: true, message: '请再次输入密码' }]" />
                             <div style="margin: 16px;">
                                 <van-button round block type="info" native-type="submit" @click.native.prevent="handleLogin">
                                 注册

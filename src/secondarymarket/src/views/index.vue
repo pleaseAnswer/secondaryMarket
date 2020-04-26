@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <main class="main">
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </main>
     <footer class="footer">
       <van-tabbar

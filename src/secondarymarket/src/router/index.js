@@ -51,6 +51,7 @@ const router = new VueRouter({
                 title: '我的',
                 requireAuth: false
             },
+            redirect: '/isSelled',
             component: () => import('@/views/shouye/mine'),
             children: [{
                 name: 'isSelled',
@@ -68,6 +69,14 @@ const router = new VueRouter({
                     requireAuth: false
                 },
                 component: () => import('@/views/mineMenu/isBuyed'),
+            },{
+                name: 'pingLun',
+                path: '/pingLun',
+                meta: {
+                    title: '评论页',
+                    requireAuth: false
+                },
+                component: () => import('@/views/mineMenu/pingLun')
             },{
                 name: 'selledNow',
                 path: '/selledNow',
@@ -134,14 +143,6 @@ const router = new VueRouter({
             requireAuth: false
         },
         component: () => import('@/views/login')
-    },{
-        name: 'pingLun',
-        path: '/pingLun',
-        meta: {
-            title: '评论页',
-            requireAuth: false
-        },
-        component: () => import('@/views/pingLun')
     },{
         name: 'forgetmm',
         path: '/forgetmm',

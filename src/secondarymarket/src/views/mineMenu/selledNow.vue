@@ -6,10 +6,11 @@
                 <img src="@/assets/img/book_1.png" alt="">
                 <div class="main-text">
                     <p class="main-title">{{item.title}}</p>
-                    <p class="main-address">{{item.address}}</p>
+                    <p class="main-address">区域：{{item.address}}</p>
+                    <p class="main-address">转手原因：{{item.sellReason}}</p>
                     <p class="main-price">{{item.price}}</p>
-                    <p class="msg-xiangQing">{{item.xiangQing}}</p>
                 </div>
+                <p class="msg-xiangQing">详情：{{item.xiangQing}}</p>
             </article>
             <template #right>
                 <van-button square text="编辑" type="primary" class="edit-button" @click="gotoEdit(item.id)"/>
@@ -29,6 +30,7 @@ export default {
                 price: '￥2.00',
                 address: '海韵',
                 xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
+                sellReason: '闲置',
                 imgSrc: '@/assets/img/book_1.png'
             },{
                 id: 2,
@@ -36,6 +38,7 @@ export default {
                 price: '￥2.00',
                 address: '海韵',
                 xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
+                sellReason: '闲置',
                 imgSrc: '@/assets/img/book_1.png'
             },{
                 id: 3,
@@ -43,6 +46,7 @@ export default {
                 price: '￥2.00',
                 address: '海韵',
                 xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
+                sellReason: '闲置',
                 imgSrc: '@/assets/img/book_1.png'
             }],
         }
@@ -60,55 +64,60 @@ export default {
 }
 .selledNow {
     .selledNow-good {
-        height: vw(350);
-        padding: vw(20);
+        height: vw(300);
+        margin: vw(10);
+        padding: vw(10);
         padding-right: 0;
         background: #fff;
+        border: 1px solid #58bc;
         .selledNow-goods-main {
-            height: vw(350);
+            height: vw(300);
             img {
-                width: vw(350);
-                height: vw(350);
+                width: vw(200);
+                height: vw(200);
                 border: 1px solid #4378ba;
                 float: left;
             }
             .main-text {
-                padding-left: vw(366);
+                height: vw(200);
+                padding-left: vw(220);
             }
         }
         .main-title {
-            height: vw(36);
-            font-size: vw(32);
-            line-height: vw(36);
+            height: vw(42);
+            font-size: vw(36);
+            line-height: vw(42);
             color: #460404;
             font-weight: bold;
+            padding-top: vw(10);
             padding-bottom: vw(10);
         }
         .main-address {
-            padding-bottom: vw(10);
+            padding-bottom: vw(6);
         }
         .main-price {
             height: vw(36);
-            font-size: vw(32);
+            font-size: vw(36);
             line-height: vw(36);
             color: #640303;
             font-weight: bold;
-            padding-bottom: vw(10);
+            padding-top: vw(10);
             padding-right: vw(10);
             text-align: right;
         }
         .msg-xiangQing {
-            height: vw(190);
+            height: vw(76);
             font-size: vw(28);
-            line-height: vw(38);
+            line-height: vw(36);
             margin: vw(10);
             margin-left: 0;
             color: #333;
             overflow: hidden;     //超出的内容隐藏
             display: -webkit-box;   //转换元素的类型，时期变成一个弹性的伸缩盒子
             -webkit-box-orient: vertical;    //让内容从上往下排列
-            -webkit-line-clamp: 5;     //文本设置显示的行数
+            -webkit-line-clamp: 2;     //文本设置显示的行数
             text-overflow: ellipsis;    //显示省略号 
+            padding-top: vw(10);
         }
     }
 

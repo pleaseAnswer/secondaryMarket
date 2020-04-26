@@ -1,4 +1,5 @@
 <template>
+<!-- 首页 -->
     <div class="shouye">
         <header class="header">
             <p>海大交易</p>

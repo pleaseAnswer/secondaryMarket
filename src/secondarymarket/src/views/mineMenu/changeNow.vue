@@ -12,7 +12,7 @@
                         <img src="@/assets/img/book_1.png" alt="">
                         <div class="changeNow-card-desc">
                             <p class="changeNow-desc-title">{{item.title}}</p>
-                            <p class="changeNow-desc-sellers">卖家：<span @click="gotoMsg(1)">{{item.sellers}}</span></p>
+                            <p class="changeNow-desc-sellers">卖家：<span @click.self.stop="gotoMsg(1)">{{item.sellers}}</span></p>
                             <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p>
                             <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
                         </div>
@@ -26,7 +26,7 @@
                         <img src="@/assets/img/book_1.png" alt="">
                         <div class="changeNow-card-desc">
                             <p class="changeNow-desc-title">{{item.title}}</p>
-                            <p class="changeNow-desc-sellers">买家：<span @click="gotoMsg(1)">{{item.buyer}}</span></p>
+                            <p class="changeNow-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">{{item.buyer}}</span></p>
                             <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p>
                             <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
                         </div>
@@ -42,7 +42,7 @@ export default {
     name: 'changeNow',
     data() {
         return {
-            active: 1,
+            active: 0,
             changeGoodsList: [{
                 id: 1,
                 title: '肖申克的救赎',
@@ -70,6 +70,14 @@ export default {
             }],
         }
     },
+    methods: {
+        gotoMsg(id) {
+            this.$router.push({name: 'sellers', params: {id}})
+        },
+        gotoDetail(id) {
+            this.$router.push({name: 'goodDetail', params: {id}})
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>

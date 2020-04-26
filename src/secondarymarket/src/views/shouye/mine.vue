@@ -1,4 +1,5 @@
 <template>
+<!-- 我的：个人中心 -->
     <div class="mine">
         <div class="mine-header">
             <p>个人中心</p>

@@ -13,7 +13,7 @@
         </van-dropdown-menu>
         <van-row>
             <van-col
-            v-for="item in 13"
+            v-for="item in booksList"
             :key="item"
             span="12">
             <div class="list-img-wrap" @click="goto(item)">
@@ -22,12 +22,12 @@
                     <!-- <img v-for="img in imageList" v-lazy="img" /> -->
                     <figcaption>
                         <p>
-                            <i class="list-text">肖申克的救赎</i>
-                            <i class="list-text-new">九成新</i>
+                            <i class="list-text">{{item.title}}</i>
+                            <i class="list-text-new">{{item.new}}</i>
                         </p>
                         <p>
-                            <i class="list-text-where">东区</i>
-                            <i class="list-text-price">￥20.00</i>
+                            <i class="list-text-where">{{item.address}}</i>
+                            <i class="list-text-price">￥{{item.price}}</i>
                         </p>
                     </figcaption>
                 </figure>
@@ -51,6 +51,13 @@ export default {
                 { text: '发布时间', value: 2 },
             ],
             isShowSearch: false,
+            booksList: [{
+                title: '肖申克的救赎',
+                new: '九成新',
+                address: '东区',
+                price: '20.00',
+                img: '@/assets/img/book_1.png'
+            }],
         }
     },
     watch: {

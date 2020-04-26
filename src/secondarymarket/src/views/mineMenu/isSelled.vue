@@ -6,7 +6,7 @@
                 <img src="@/assets/img/book_1.png" alt="">
                 <div class="isSelled-card-desc">
                     <p class="isSelled-desc-title">{{item.title}}</p>
-                    <p class="isSelled-desc-sellers">买家：<span @click="gotoMsg(1)">{{item.buyer}}</span></p>
+                    <p class="isSelled-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">{{item.buyer}}</span></p>
                     <p class="isSelled-desc-pric">{{item.price}}</p>
                     <section>
                         <span class="isSelled-desc-pingLunTitle">评论：</span>
@@ -59,6 +59,9 @@ export default {
         },
         gotoDetail(id) {
             this.$router.push({name:'goodDetail', params: {id}})
+        },
+        gotoMsg(id) {
+            this.$router.push({name: 'sellers', params: {id}})
         }
     }
 }
