@@ -1,5 +1,5 @@
 {
-    "PORT":8090,
-    "dbUrl":"mongodb://localhost:27017",
-    "dbName":"secondaryMarket"
+    "PORT": 8090,
+    "dbUrl": "mongodb://localhost:27017",
+    "dbName": "secondaryMarket"
 }

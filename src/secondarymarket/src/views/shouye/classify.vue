@@ -53,7 +53,8 @@
     </div>
 </template>
 <script>
-import Base from '@/config/base';
+// import Base from '@/config/base';
+import { my } from '@/api';
 export default {
     name: 'classify',
     data() {
@@ -179,21 +180,22 @@ export default {
         goto(id) {
             this.$router.push({ name: 'goodsList', params: {id} })
         },
-        getList() {
-            // console.log(Base.prefixUrl);
+        async getList() {
+                let result = await my.get("/classify");
+            // let url = Base.prefixUrl + '/classify';
+            console.log(1234, result);
             
-            let url = Base.prefixUrl + '/classify';
-            try{
-                this.$axios.get(url)
-                .then( res => {
-                    console.log('res',res);
-                })
-                .catch( error => {
-                    console.log('error', error);
-                })
-            } catch(error) {
-                console.log('error', error);
-            }
+            // try{
+            //     my.get('/classify')
+            //     .then( res => {
+            //         console.log('res',res);
+            //     })
+            //     .catch( error => {
+            //         console.log('error', error);
+            //     })
+            // } catch(error) {
+            //     console.log('123error', error);
+            // }
         }
     },
 }

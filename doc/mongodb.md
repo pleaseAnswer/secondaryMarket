@@ -11,4 +11,5 @@
 
 ### 跑起配置文件
 
-> H:\MongoDB\bin\mongo.exe --config H:\MongoDB\mongo.config
+> H:\MongoDB\bin\mongod.exe --config H:\MongoDB\mongo.config
+

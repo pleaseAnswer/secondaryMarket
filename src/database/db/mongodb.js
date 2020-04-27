@@ -24,6 +24,7 @@ async function connect() {
  * @param          fields    过滤字段
  */
 async function find(colName, query = {}, options = {}) {
+    
     //fields:用于过滤某些字段
     let { fields: attr, skip, limit, sort } = options;
     const { db, client } = await connect();
@@ -40,9 +41,9 @@ async function find(colName, query = {}, options = {}) {
 
     //promise对象--.toArray()才能拿到结果
 
-    let result = await collection.find(query, {
-        attr
-    });
+    let result = await collection.find( query, {attr}).toArray();
+    console.log(3234,result);
+    
 
 
     //跳过数量
@@ -69,7 +70,6 @@ async function find(colName, query = {}, options = {}) {
         });
     }
 
-    result = result.toArray();
     client.close();
 
     return result;
