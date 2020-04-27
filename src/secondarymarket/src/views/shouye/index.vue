@@ -51,7 +51,7 @@
                 <van-row gutter="20">
                     <van-col span="6" v-for="ele in item.list" :key="ele.id">
                         <div class="recommend-item">
-                            <img src="@/assets/img/book_1.png" alt="" style="width: 100%;height: 100%">
+                            <img :src="ele.img" alt="" style="width: 100%;height: 80%">
                         </div>
                     </van-col>
                 </van-row>
@@ -60,7 +60,7 @@
     </div>
 </template>
 <script>
-
+import { my } from '@/api';
 export default {
     name: 'shouye',
     data() {
@@ -78,73 +78,20 @@ export default {
                 id: 4,
                 imgUrl: '@/assets/img/zhongqu.jpg',
             }],
-            commitList: [{
-                id: 1,
-                title: '图书',
-                list: [{
-                    id: 11,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 12,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 13,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 14,
-                    img: '@/assets/img/book_1.png'
-                }]
-            },{
-                id: 2,
-                title: '生活百货',
-                list: [{
-                    id: 21,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 22,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 23,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 24,
-                    img: '@/assets/img/book_1.png'
-                }]
-            },{
-                id: 3,
-                title: '饰品',
-                list: [{
-                    id: 31,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 32,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 33,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 34,
-                    img: '@/assets/img/book_1.png'
-                }]
-            },{
-                id: 4,
-                title: '食物',
-                list: [{
-                    id: 41,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 42,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 43,
-                    img: '@/assets/img/book_1.png'
-                },{
-                    id: 44,
-                    img: '@/assets/img/book_1.png'
-                }]
-            },]
+            commitList: []
         }
     },
+    created() {
+        this.getCommitList();
+    },
+    methods: {
+        async getCommitList() {
+            let { data } = await my.get('/commit');
+            console.log(data);
+            this.commitList = data[0].commitList;
+            
+        },
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -186,11 +133,11 @@ export default {
     background: #fff;
 }
 .recommend {
-    background: #fff;
+    background: #ccc;
     section {
         margin: vw(20) 0;
         padding: 0 vw(20);
-        background: #7fd4e3;
+        background: #fff;
     }
 }
 .recommend-item {

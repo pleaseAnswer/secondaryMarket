@@ -8,7 +8,7 @@ const {formatData} = require('../utils');
 
 // 获取分类页列表
 Router.get('/', async (req, res) => {
-    let result = await find('classify');
+    let result = await find('commit');
     res.send(result)
 })
 
