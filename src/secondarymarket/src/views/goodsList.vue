@@ -9,7 +9,7 @@
             </template>
         </van-nav-bar>
         <van-dropdown-menu>
-            <van-dropdown-item v-model="sortType" :options="sortList"  title="排序方式" style="width: 76%"/>
+            <van-dropdown-item v-model="sortType" :options="sortList" style="width: 76%"/>
         </van-dropdown-menu>
         <van-row>
             <van-col
@@ -48,7 +48,8 @@ export default {
             sortList: [
                 { text: '价格升序', value: 0 },
                 { text: '价格降序', value: 1 },
-                { text: '发布时间', value: 2 },
+                { text: '最新', value: 2 },
+                { text: '发布时间', value: 3 },
             ],
             isShowSearch: false,
             booksList: [{

@@ -1,0 +1,163 @@
+{
+    "text" : "图书",
+    "signId": "10",
+    "parentId": "1"
+}
+{
+    "text" : "生活百货",
+    "signId": "20",
+    "parentId": "1"
+}
+{
+    "text" : "饰品",
+    "signId": "30",
+    "parentId": "1"
+}
+{
+    "text" : "食物",
+    "signId": "40",
+    "parentId": "1"
+}
+{
+    "imgUrl" : "http://img2.imgtn.bdimg.com/it/u=1126327252,2560711258&fm=26&gp=0.jpg",
+    "text" : "教科书",
+    "signId": "1010",
+    "parentId": "10"
+}
+{
+    "imgUrl" : "http://img14.360buyimg.com/n0/jfs/t14731/39/854944955/121485/6c0b6de9/5a3bbb67N7be8d4e6.png",
+    "text" : "考级资料",
+    "signId": "1020",
+    "parentId": "10"
+}
+{
+    "imgUrl" : "http://img5.imgtn.bdimg.com/it/u=2655131523,3655291626&fm=26&gp=0.jpg",
+    "text" : "名著",
+    "signId": "1030",
+    "parentId": "10"
+}
+{
+    "imgUrl" : "http://file.youboy.com/a/47/38/51/5/23171645.JPG",
+    "text" : "笔记本",
+    "signId": "1040",
+    "parentId": "10"
+}
+{
+    "imgUrl" : "http://pic.baike.soso.com/p/20130705/20130705132747-526275954.jpg",
+    "text" : "其他",
+    "signId": "1050",
+    "parentId": "10"
+}{
+    "imgUrl" : "http://pic2.cxtuku.com/00/04/63/b6854d691153.jpg",
+    "text" : "衣服",
+    "signId": "2010",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://file.youboy.com/a/36/62/2/2/15498582.jpg",
+    "text" : "电器",
+    "signId": "2020",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://ku.90sjimg.com/element_origin_min_pic/18/07/17/c98affd5d2ef22dceea0ae8621c5e797.jpg",
+    "text" : "文具",
+    "signId": "2030",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://img005.hc360.cn/g1/M01/1B/55/wKhQL1HHmk-EP5pPAAAAAORIzJM040.jpg",
+    "text" : "纸巾",
+    "signId": "2040",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://img2.imgtn.bdimg.com/it/u=3718810847,1083210256&fm=214&gp=0.jpg",
+    "text" : "餐具",
+    "signId": "2050",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://img3.imgtn.bdimg.com/it/u=1675031842,1930609079&fm=26&gp=0.jpg",
+    "text" : "洗护用品",
+    "signId": "2060",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://pic1.cxtuku.com/00/16/02/b4386a86f32e.jpg",
+    "text" : "其他",
+    "signId": "2070",
+    "parentId": "20"
+}
+{
+    "imgUrl" : "http://img4.imgtn.bdimg.com/it/u=1282446417,1849083259&fm=26&gp=0.jpg",
+    "text" : "收纳盒",
+    "signId": "3010",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3075128714,1466066920&fm=26&gp=0.jpg",
+    "text" : "盆景",
+    "signId": "3020",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "http://s02.lmbang.com/M00/28/1F/ecloD1Xf6y2AVkOOAALFf5CMXSM330.jpg%21r750x600x100.jpg",
+    "text" : "首饰",
+    "signId": "3030",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "http://img2.imgtn.bdimg.com/it/u=3228625142,1551389404&fm=15&gp=0.jpg",
+    "text" : "帽子",
+    "signId": "3040",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "http://image.cn.made-in-china.com/prodzip/000-cvyQesKFwhoP.jpg",
+    "text" : "围巾",
+    "signId": "3050",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "http://img004.hc360.cn/hb/30491273a81D96E6FF6a0FB41D30E8a0a6.jpg",
+    "text" : "摆件",
+    "signId": "3060",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2595362004,909397563&fm=26&gp=0.jpg",
+    "text" : "其他",
+    "signId": "3070",
+    "parentId": "30"
+}
+{
+    "imgUrl" : "http://bpic.588ku.com/element_origin_min_pic/16/10/21/dda0dd45bbac46bde5fe44acfdae5326.jpg",
+    "text" : "五谷",
+    "signId": "4010",
+    "parentId": "40"
+}
+{
+    "imgUrl" : "http://img1.juimg.com/160621/330840-16062122193189.jpg",
+    "text" : "调味",
+    "signId": "4020",
+    "parentId": "40"
+}
+{
+    "imgUrl" : "http://bpic.588ku.com/element_origin_min_pic/16/12/18/775ebef394ff8f224c7dae0e8b5dbd13.jpg",
+    "text" : "饮料",
+    "signId": "4030",
+    "parentId": "40"
+}
+{
+    "imgUrl" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003524103,147572621&fm=26&gp=0.jpg",
+    "text" : "零食",
+    "signId": "4040",
+    "parentId": "40"
+}
+{
+    "imgUrl" : "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3889708187,302941442&fm=26&gp=0.jpg",
+    "text" : "其他",
+    "signId": "4050",
+    "parentId": "40"
+}
