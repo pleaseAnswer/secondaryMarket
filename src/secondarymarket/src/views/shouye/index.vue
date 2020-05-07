@@ -7,7 +7,7 @@
         <section class="banner">
             <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
                 <van-swipe-item v-for="item in lunboList" :key="item.id">
-                    <img src="@/assets/img/yaoyao.jpg" alt="">
+                    <img :src="item.imgUrl" alt="">
                 </van-swipe-item>
             </van-swipe>
             <!-- <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -67,16 +67,16 @@ export default {
         return {
             lunboList: [{
                 id: 1,
-                imgUrl: '@/assets/img/yaoyao.jpg',
+                imgUrl: require('@/assets/img/yaoyao.jpg'),
             },{
                 id: 2,
-                imgUrl: '@/assets/img/dongqu.png',
+                imgUrl: require('@/assets/img/dongqu.png'),
             },{
                 id: 3,
-                imgUrl: '@/assets/img/xiqu.jpg',
+                imgUrl: require('@/assets/img/xiqu.png'),
             },{
                 id: 4,
-                imgUrl: '@/assets/img/zhongqu.jpg',
+                imgUrl: require('@/assets/img/zhongqu.png'),
             }],
             commitList: []
         }

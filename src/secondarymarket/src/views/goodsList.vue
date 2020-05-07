@@ -13,12 +13,12 @@
         </van-dropdown-menu>
         <van-row>
             <van-col
-            v-for="item in booksList"
-            :key="item"
+            v-for="(item,index) in booksList"
+            :key="index+1"
             span="12">
             <div class="list-img-wrap" @click="goto(item)">
                 <figure class="list-img">
-                    <img src="@/assets/img/book_1.png" alt="" />
+                    <img :src="item.img" alt="" />
                     <!-- <img v-for="img in imageList" v-lazy="img" /> -->
                     <figcaption>
                         <p>
@@ -37,7 +37,7 @@
     </div>
 </template>
 <script>
-
+import { my } from '@/api';
 export default {
     name: 'goodsList',
     data() {
@@ -66,6 +66,9 @@ export default {
             console.log(this.sortType);
         }
     },
+    async created() {
+        this.getList()
+    },
     methods: {
         onClickLeft() {
             this.$router.go(-1);
@@ -76,6 +79,11 @@ export default {
         showSearch() {
             this.isShowSearch = true;
             this.titleName = '';
+        },
+        async getList() {
+            const id = Number(this.$route.query.id);
+            let { data } = await my.get(`/goodsList/${id}`);
+            this.booksList = data;
         },
     }
 }
@@ -96,19 +104,28 @@ export default {
         background: #fff;
     }
     img {
-        width: 100%;
+        width: 80%;
         height: 70%;
-        padding-bottom: 5%;
+        padding: 5% 10%;
+        // border-bottom: 1px solid #369;
+        background: #eee;
     }
     figcaption {
         height: vw(36);
         font-size: vw(24);
         line-height: vw(36);
         color: #666;
-        padding: vw(10);
+        padding-left: vw(10);
+        padding-right: vw(10);
         p{
             .list-text {
+                display: inline-block;
+                width: 70%;
+                height: vw(36);
                 font-size: vw(28);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 color: #333;
                 font-weight: bold;
             }

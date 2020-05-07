@@ -12,4 +12,10 @@ Router.get('/', async (req, res) => {
     res.send(result)
 })
 
+// 获取商品详情
+Router.get('/:id', async (req, res) => {
+    let result = await find('commit');
+    res.send(result)
+})
+
 module.exports=Router;

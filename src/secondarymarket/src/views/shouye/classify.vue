@@ -6,11 +6,11 @@
         </header>
         <div class="classify-main">
             <van-tree-select height="100vw" :items="items" :main-active-index.sync="active">
-                <template #content>
+                <template #content v-if="items.length !== 0">
                     <div class="classify-main-content" v-if="active === 0">
                         <van-row>
-                            <van-col span="8" v-for="item in childrenList.bookList" :key="item.id">
-                                <article @click="goto(item.id)">
+                            <van-col span="8" v-for="item in items[0].children" :key="item.id">
+                                <article @click="goto(item.signId)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
                                 </article>
@@ -19,8 +19,8 @@
                     </div>
                     <div class="classify-main-content" v-if="active === 1">
                         <van-row>
-                            <van-col span="8" v-for="item in childrenList.baihuoList" :key="item.id">
-                                <article @click="goto(item.id)">
+                            <van-col span="8" v-for="item in items[1].children" :key="item.id">
+                                <article @click="goto(item.signId)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
                                 </article>
@@ -29,8 +29,8 @@
                     </div>
                     <div class="classify-main-content" v-if="active === 2">
                         <van-row>
-                            <van-col span="8" v-for="item in childrenList.shipinList" :key="item.id">
-                                <article @click="goto(item.id)">
+                            <van-col span="8" v-for="item in items[2].children" :key="item.id">
+                                <article @click="goto(item.signId)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
                                 </article>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="classify-main-content" v-if="active === 3">
                         <van-row>
-                            <van-col span="8" v-for="item in childrenList.shiwuList" :key="item.id">
+                            <van-col span="8" v-for="(item,index) in items[3].children" :key="index+1">
                                 <article @click="goto(item.id)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
@@ -62,7 +62,6 @@ export default {
             items: [],
             // activeId: 1,
             active: 0,
-            childrenList: [],
         }
     },
     created() {
@@ -70,24 +69,12 @@ export default {
     },
     methods: {
         goto(id) {
-            this.$router.push({ name: 'goodsList', params: {id} })
+            this.$router.push({ name: 'goodsList', query: { id } })
+    //   this.$router.push({ name: "personDetail", query: { id } });
         },
         async getList() {
             let { data } = await my.get("/classify");
-            console.log(1234, data);
-            let itemsList = [];
-            let dataList = data[0].dataList;
-            dataList.map( item => {
-                let o = { text: item.title, children: []};
-                itemsList.push(o);
-            })
-            this.items = itemsList;
-            this.childrenList = {
-                bookList: dataList[0].data,
-                baihuoList: dataList[1].data,
-                shipinList: dataList[2].data,
-                shiwuList: dataList[3].data
-            }
+            this.items = data;
         }
     },
 }

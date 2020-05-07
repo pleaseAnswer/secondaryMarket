@@ -5,6 +5,7 @@ const { token, formatData } = require('../utils');
 
 // 引入文件模块
 const classifyRouter = require('./classify');
+const goodsListRouter = require('./goodsList');
 const commitRouter = require('./commit');
 
 // 跨域解决方案CORS
@@ -33,6 +34,7 @@ Router.use(express.json(), express.urlencoded({extended:false}));
 
 // 关联中间件
 Router.use('/classify', classifyRouter);
+Router.use('/goodsList', goodsListRouter);
 Router.use('/commit', commitRouter);
 
 // 检验token

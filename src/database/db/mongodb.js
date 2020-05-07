@@ -42,10 +42,7 @@ async function find(colName, query = {}, options = {}) {
     //promise对象--.toArray()才能拿到结果
 
     let result = await collection.find( query, {attr}).toArray();
-    console.log(3234,result);
     
-
-
     //跳过数量
     if (skip) {
         result = result.skip(skip);
