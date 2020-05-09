@@ -1,0 +1,133 @@
+{
+    "sellPeaple": "张花花",
+    "sellPeapleId": "01",
+    "xueHao": "20161192****",
+    "address": "东区",
+    "suShe": "海韵",
+    "addressCode": 1,
+    "pingLun": [{
+        "pingLunName": "周**",
+        "pingLunText": "东西都很新，也很便宜，很好呀",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "黄**",
+        "pingLunText": "东西棒",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "李虎哈",
+    "sellPeapleId": "02",
+    "xueHao": "20161182****",
+    "address": "中区",
+    "suShe": "海霞",
+    "addressCode": 2,
+    "pingLun": [{
+        "pingLunName": "周**",
+        "pingLunText": "东西都很新，也很便宜，很好呀",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "黄**",
+        "pingLunText": "东西棒",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "白米丹",
+    "sellPeapleId": "03",
+    "xueHao": "20161172****",
+    "address": "西区",
+    "suShe": "海欢",
+    "addressCode": 3,
+    "pingLun": [{
+        "pingLunName": "周**",
+        "pingLunText": "东西都很好呀",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "黄**",
+        "pingLunText": "东西还可以",
+        "pingLunScore": 3,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "黄生文",
+    "sellPeapleId": "04",
+    "xueHao": "20161162****",
+    "address": "西区",
+    "suShe": "海乐",
+    "addressCode": 3,
+    "pingLun": [{
+        "pingLunName": "王**",
+        "pingLunText": "东西真的好",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "李**",
+        "pingLunText": "东西还可以呀",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "陈可可",
+    "sellPeapleId": "05",
+    "xueHao": "20161162****",
+    "address": "东区",
+    "suShe": "海天",
+    "addressCode": 1,
+    "pingLun": [{
+        "pingLunName": "钟**",
+        "pingLunText": "东西真的好",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "张**",
+        "pingLunText": "东西还可以呀",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "甄宇楠",
+    "sellPeapleId": "06",
+    "xueHao": "20161162****",
+    "address": "西区",
+    "suShe": "海蓝",
+    "addressCode": 3,
+    "pingLun": [{
+        "pingLunName": "郑**",
+        "pingLunText": "东西真的好",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "陈**",
+        "pingLunText": "东西还可以呀",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}
+{
+    "sellPeaple": "王华安",
+    "sellPeapleId": "07",
+    "xueHao": "20161162****",
+    "address": "东区",
+    "suShe": "海宇",
+    "addressCode": 1,
+    "pingLun": [{
+        "pingLunName": "罗**",
+        "pingLunText": "东西真的好",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "谢**",
+        "pingLunText": "东西还可以呀",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }]
+}

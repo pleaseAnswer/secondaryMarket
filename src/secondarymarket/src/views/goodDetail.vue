@@ -1,10 +1,10 @@
 <template>
     <div class="goodsDetail">
-        <van-nav-bar :title="titleName" left-text="返回" left-arrow @click-left="onClickLeft">
+        <van-nav-bar :title="goodInfo.title" left-text="返回" left-arrow @click-left="onClickLeft">
         </van-nav-bar>
         <div class="figure">
             <div class="img">
-                <img src="@/assets/img/book_1.png" alt="">
+                <img :src="goodInfo.img" alt="">
                 <div class="img-shoucang" @click="gotoSava(1)">
                     <template v-if="isShixing">
                         <van-icon name="like" color='#c55' size="60"/>
@@ -15,19 +15,19 @@
                 </div>
             </div>
             <div class="figcaption">
-                <p class="img-title">肖申克的救赎</p>
+                <p class="img-title">{{goodInfo.title}}</p>
                 <p class="img-text">
-                    <i class="img-text-new">九成新</i>
-                    <i class="img-text-price">￥20</i>
+                    <i class="img-text-new">{{goodInfo.new}}</i>
+                    <i class="img-text-price">￥{{goodInfo.price}}</i>
                 </p>
                 <p class="reasonText">
-                    转卖原因：<span class="text-sell">{{sellReason}}</span>
+                    转卖原因：<span class="text-sell">{{goodInfo.sellReason}}</span>
                 </p>
                 <p class="nameText">
-                    卖家：<span class="text-sell" @click="gotoMsg(1)">{{sellPeaple}}</span>
+                    卖家：<span class="text-sell" @click="gotoMsg(goodInfo.sellPeapleId)">{{goodInfo.sellPeaple}}</span>
                 </p>
                 <p class="addressText">
-                    卖家所在：<span class="text-sell">{{sellAddress}}</span>
+                    卖家所在：<span class="text-sell">{{goodInfo.sellAddress}}</span>
                 </p>
             </div>
         </div>
@@ -35,8 +35,7 @@
             <van-collapse-item title="商品详情" name="1" icon="shop-o">
                 <div class="xiangQing">
                     <p class="xiangQing-text">
-                        商品详情商品详情商品详情商品详情商品详情
-                        商品详情商品详情商品详情商品详情商品详情
+                        {{goodInfo.goodText}}
                     </p>
                     <img src="@/assets/img/book_1.png" alt="">
                     <img src="@/assets/img/book_1.png" alt="">
@@ -50,18 +49,30 @@
     </div>
 </template>
 <script>
-
+import { my } from '@/api';
 export default {
     name: 'goodsDetail',
     data() {
         return {
-            titleName: '商品名称',
+            goodInfo: {
+                title: '商品名称',
+                sellReason: '毕业季',
+                sellPeaple: '张**',
+                sellAddress: '东区海韵',
+                goodText: '商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情',
+                img: '',
+            },
             isShixing: false,
-            sellReason: '毕业季',
-            sellPeaple: '张**',
-            sellAddress: '东区海韵',
             activeNames: ['1'],
         }
+    },
+    async created() {
+        let id = this.$route.params.id;
+        let result = await my.get(`/goodsList/goodsDetail/${id}`);
+        this.goodInfo = result.data[0]
+        this.goodInfo.sellAddress=this.goodInfo.address
+        console.log(this.goodInfo);
+        
     },
     methods: {
         onClickLeft() {
@@ -72,8 +83,8 @@ export default {
             this.isShixing = !this.isShixing;
         },
         gotoMsg(id) {
-            console.log('卖家消息');
-            this.$router.push({name:'sellers',params:{id}})
+            console.log('卖家消息', id);
+            this.$router.push({ name:'sellers',params:{ id }})
         },
         gotoConection() {
             console.log('聊天');

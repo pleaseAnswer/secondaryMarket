@@ -55,13 +55,13 @@ export default {
     },
     methods: {
         gotoPingLun(id) {
-            this.$router.push({name:'pingLun', params: {id}})
+            this.$router.push({name:'pingLun', query: {id}})
         },
         gotoDetail(id) {
-            this.$router.push({name:'goodDetail', params: {id}})
+            this.$router.push({name:'goodDetail', query: {id}})
         },
         gotoMsg(id) {
-            this.$router.push({name: 'sellers', params: {id}})
+            this.$router.push({name: 'sellers', query: {id}})
         }
     }
 }

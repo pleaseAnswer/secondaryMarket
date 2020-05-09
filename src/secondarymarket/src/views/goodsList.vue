@@ -16,7 +16,7 @@
             v-for="(item,index) in booksList"
             :key="index+1"
             span="12">
-            <div class="list-img-wrap" @click="goto(item)">
+            <div class="list-img-wrap" @click="goto(item.signId)">
                 <figure class="list-img">
                     <img :src="item.img" alt="" />
                     <!-- <img v-for="img in imageList" v-lazy="img" /> -->
@@ -43,6 +43,7 @@ export default {
     data() {
         return {
             titleName: '教科书',
+            id: '',
             keyValue: '',
             sortType: 0,
             sortList: [
@@ -52,21 +53,26 @@ export default {
                 { text: '发布时间', value: 3 },
             ],
             isShowSearch: false,
-            booksList: [{
-                title: '肖申克的救赎',
-                new: '九成新',
-                address: '东区',
-                price: '20.00',
-                img: '@/assets/img/book_1.png'
-            }],
+            booksList: [
+            //     {
+            //     title: '肖申克的救赎',
+            //     new: '九成新',
+            //     address: '东区',
+            //     price: '20.00',
+            //     img: '@/assets/img/book_1.png'
+            // }
+            ],
         }
     },
     watch: {
         sortType() {
             console.log(this.sortType);
+        },
+        id() {
+            this.getList()
         }
     },
-    async created() {
+    created() {
         this.getList()
     },
     methods: {
@@ -74,16 +80,18 @@ export default {
             this.$router.go(-1);
         },
         goto(id) {
-            this.$router.push({ name: 'goodDetail', params: {id} })
+            this.$router.push({ name: 'goodDetail', query: {id} })
         },
         showSearch() {
             this.isShowSearch = true;
             this.titleName = '';
         },
         async getList() {
-            const id = Number(this.$route.query.id);
-            let { data } = await my.get(`/goodsList/${id}`);
+            this.id = Number(this.$route.query.id);
+            let { data } = await my.get(`/goodsList/${this.id}`);
             this.booksList = data;
+            let { data: title } = await my.get(`/classify/${this.id}`);
+            this.titleName = title 
         },
     }
 }

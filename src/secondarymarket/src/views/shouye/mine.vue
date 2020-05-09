@@ -73,14 +73,14 @@ export default {
     methods: {
         gotoYimai() {
             if(!this.isUnLogin) {
-                this.$router.push({name: 'isBuyed', params: {id: 1}})
+                this.$router.push({name: 'isBuyed', query: {id: 1}})
             }
         },
         gotoLogin() {
             this.$router.push({name:'login'})
         },
         goto(name,id) {
-            this.$router.push({name, params: {id}})
+            this.$router.push({name, query: {id}})
             
             
             switch(name) {

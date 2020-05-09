@@ -29,7 +29,7 @@
                     </div>
                     <div class="classify-main-content" v-if="active === 2">
                         <van-row>
-                            <van-col span="8" v-for="item in items[2].children" :key="item.id">
+                            <van-col span="8" v-for="(item,index) in items[2].children" :key="index+1">
                                 <article @click="goto(item.signId)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
@@ -40,7 +40,7 @@
                     <div class="classify-main-content" v-if="active === 3">
                         <van-row>
                             <van-col span="8" v-for="(item,index) in items[3].children" :key="index+1">
-                                <article @click="goto(item.id)">
+                                <article @click="goto(item.signId)">
                                     <img :src="item.imgUrl" alt="">
                                     <p>{{item.text}}</p>
                                 </article>

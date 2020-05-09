@@ -7,7 +7,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "10.00",
-    "img": "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg"
+    "img": "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -18,7 +21,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "10.00",
-    "img": "http://pic8.58cdn.com.cn/zhuanzh/n_v26d51b3a826a84b9e9f66135834e49184_338_282.jpg"
+    "img": "http://pic8.58cdn.com.cn/zhuanzh/n_v26d51b3a826a84b9e9f66135834e49184_338_282.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -29,7 +35,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "12.00",
-    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0"
+    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -40,7 +49,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "32.00",
-    "img": "http://img3.imgtn.bdimg.com/it/u=3644433603,2675728228&fm=15&gp=0.jpg"
+    "img": "http://img3.imgtn.bdimg.com/it/u=3644433603,2675728228&fm=15&gp=0.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -51,7 +63,10 @@
     "address": "中区",
     "addressCode": 2,
     "price": "16.00",
-    "img": "http://img14.360buyimg.com/n7/jfs/t6727/197/1082480492/112898/d805a003/594acf07n74bc5641.jpg"
+    "img": "http://img14.360buyimg.com/n7/jfs/t6727/197/1082480492/112898/d805a003/594acf07n74bc5641.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -62,7 +77,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "18.00",
-    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vdGZzY29tL2kzLzM1Mjc5ODE3MC9UQjFvX19PaDZ1aFNLSmpTc3BkWFhjMTFYWGFfISEkMw.jpg"
+    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vdGZzY29tL2kzLzM1Mjc5ODE3MC9UQjFvX19PaDZ1aFNLSmpTc3BkWFhjMTFYWGFfISEkMw.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -73,7 +91,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "14.00",
-    "img": "http://img14.360buyimg.com/n0/jfs/t16006/29/2274197099/439558/24a9560/5aa0da84Ne30ef7fd.png"
+    "img": "http://img14.360buyimg.com/n0/jfs/t16006/29/2274197099/439558/24a9560/5aa0da84Ne30ef7fd.png",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -84,7 +105,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "36.00",
-    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vYmFvL3VwbG9hZGVkL2kzL1RCMXh4a0JMRiQ2Y0tYcCQ1JDM.jpg"
+    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vYmFvL3VwbG9hZGVkL2kzL1RCMXh4a0JMRiQ2Y0tYcCQ1JDM.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -95,7 +119,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "12.00",
-    "img": "http://booklibimg.kfzimg.com/data/book_lib_img_v2/isbn/0/7925/79252e2d06b43bc2d02559478f5dcdfd_0_0_0_0.jpg"
+    "img": "http://booklibimg.kfzimg.com/data/book_lib_img_v2/isbn/0/7925/79252e2d06b43bc2d02559478f5dcdfd_0_0_0_0.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -106,7 +133,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "10.00",
-    "img": "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg"
+    "img": "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -117,7 +147,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "10.00",
-    "img": "http://pic8.58cdn.com.cn/zhuanzh/n_v26d51b3a826a84b9e9f66135834e49184_338_282.jpg"
+    "img": "http://pic8.58cdn.com.cn/zhuanzh/n_v26d51b3a826a84b9e9f66135834e49184_338_282.jpg",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -128,7 +161,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "12.00",
-    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0"
+    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01"
 }
 {
     "parentId": "1010",
@@ -139,7 +175,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "32.00",
-    "img": "http://img3.imgtn.bdimg.com/it/u=3644433603,2675728228&fm=15&gp=0.jpg"
+    "img": "http://img3.imgtn.bdimg.com/it/u=3644433603,2675728228&fm=15&gp=0.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1010",
@@ -150,7 +189,10 @@
     "address": "中区",
     "addressCode": 2,
     "price": "16.00",
-    "img": "http://img14.360buyimg.com/n7/jfs/t6727/197/1082480492/112898/d805a003/594acf07n74bc5641.jpg"
+    "img": "http://img14.360buyimg.com/n7/jfs/t6727/197/1082480492/112898/d805a003/594acf07n74bc5641.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1010",
@@ -161,7 +203,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "18.00",
-    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vdGZzY29tL2kzLzM1Mjc5ODE3MC9UQjFvX19PaDZ1aFNLSmpTc3BkWFhjMTFYWGFfISEkMw.jpg"
+    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vdGZzY29tL2kzLzM1Mjc5ODE3MC9UQjFvX19PaDZ1aFNLSmpTc3BkWFhjMTFYWGFfISEkMw.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1010",
@@ -172,7 +217,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "14.00",
-    "img": "http://img14.360buyimg.com/n0/jfs/t16006/29/2274197099/439558/24a9560/5aa0da84Ne30ef7fd.png"
+    "img": "http://img14.360buyimg.com/n0/jfs/t16006/29/2274197099/439558/24a9560/5aa0da84Ne30ef7fd.png",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1010",
@@ -183,7 +231,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "36.00",
-    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vYmFvL3VwbG9hZGVkL2kzL1RCMXh4a0JMRiQ2Y0tYcCQ1JDM.jpg"
+    "img": "http://www.t-chs.com/tuhsJDEwLmFsaWNkbi5jb20vYmFvL3VwbG9hZGVkL2kzL1RCMXh4a0JMRiQ2Y0tYcCQ1JDM.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1010",
@@ -194,7 +245,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "12.00",
-    "img": "http://booklibimg.kfzimg.com/data/book_lib_img_v2/isbn/0/7925/79252e2d06b43bc2d02559478f5dcdfd_0_0_0_0.jpg"
+    "img": "http://booklibimg.kfzimg.com/data/book_lib_img_v2/isbn/0/7925/79252e2d06b43bc2d02559478f5dcdfd_0_0_0_0.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 
 {
@@ -206,7 +260,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "10.00",
-    "img": "http://img12.360buyimg.com/n0/jfs/t7708/106/4220397539/18500/aa6a4454/5a0b0f16Nfcb7607c.jpg"
+    "img": "http://img12.360buyimg.com/n0/jfs/t7708/106/4220397539/18500/aa6a4454/5a0b0f16Nfcb7607c.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -217,7 +274,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "20.00",
-    "img": "http://img3m0.ddimg.cn/87/19/28489020-1_b_13.jpg"
+    "img": "http://img3m0.ddimg.cn/87/19/28489020-1_b_13.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -228,7 +288,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "29.00",
-    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0"
+    "img": "http://pic7.58cdn.com.cn/zhuanzh/n_x998822525653770241.jpg?w=750&h=0",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -239,7 +302,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "20.00",
-    "img": "http://img3m6.ddimg.cn/44/22/26484326-1_b_2.jpg"
+    "img": "http://img3m6.ddimg.cn/44/22/26484326-1_b_2.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -250,7 +316,10 @@
     "address": "中区",
     "addressCode": 2,
     "price": "20.00",
-    "img": "http://img3m1.ddimg.cn/88/20/28489021-1_b_8.jpg"
+    "img": "http://img3m1.ddimg.cn/88/20/28489021-1_b_8.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -261,7 +330,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "http://img3m5.ddimg.cn/92/30/27890075-1_b_2.jpg"
+    "img": "http://img3m5.ddimg.cn/92/30/27890075-1_b_2.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -272,7 +344,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "14.00",
-    "img": "http://img3m4.ddimg.cn/45/15/26925174-1_b_3.jpg"
+    "img": "http://img3m4.ddimg.cn/45/15/26925174-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -283,7 +358,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "16.00",
-    "img": "http://img3m8.ddimg.cn/27/16/1397270088-1_b_2.jpg"
+    "img": "http://img3m8.ddimg.cn/27/16/1397270088-1_b_2.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -294,7 +372,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "12.00",
-    "img": "http://img3m4.ddimg.cn/10/6/410269474-1_b_3.jpg"
+    "img": "http://img3m4.ddimg.cn/10/6/410269474-1_b_3.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -305,7 +386,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "10.00",
-    "img": "http://img3m2.ddimg.cn/1/20/27939682-1_b_3.jpg"
+    "img": "http://img3m2.ddimg.cn/1/20/27939682-1_b_3.jpg",
+    "sellPeaple": "李虎哈",
+    "sellReason": "闲置",
+    "sellPeapleId": "02"
 }
 {
     "parentId": "1020",
@@ -316,7 +400,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "10.00",
-    "img": "http://img3m5.ddimg.cn/82/28/28507825-1_b_2.jpg"
+    "img": "http://img3m5.ddimg.cn/82/28/28507825-1_b_2.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -327,7 +414,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "12.00",
-    "img": "http://img3m8.ddimg.cn/16/19/27938608-1_b_3.jpg"
+    "img": "http://img3m8.ddimg.cn/16/19/27938608-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -338,7 +428,10 @@
     "address": "西区",
     "addressCode": 3,
     "price": "12.00",
-    "img": "http://img3m4.ddimg.cn/81/27/28507824-1_b_3.jpg"
+    "img": "http://img3m4.ddimg.cn/81/27/28507824-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -349,7 +442,10 @@
     "address": "中区",
     "addressCode": 2,
     "price": "16.00",
-    "img": "http://img3m3.ddimg.cn/80/26/28507823-1_b_2.jpg"
+    "img": "http://img3m3.ddimg.cn/80/26/28507823-1_b_2.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -360,7 +456,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "18.00",
-    "img": "http://img3m7.ddimg.cn/88/26/28520107-1_b_3.jpg"
+    "img": "http://img3m7.ddimg.cn/88/26/28520107-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -371,7 +470,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "14.00",
-    "img": "http://img3m3.ddimg.cn/8/27/28518443-1_b_3.jpg"
+    "img": "http://img3m3.ddimg.cn/8/27/28518443-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -382,7 +484,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "16.00",
-    "img": "http://img3m4.ddimg.cn/9/28/28518444-1_b_2.jpg"
+    "img": "http://img3m4.ddimg.cn/9/28/28518444-1_b_2.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1020",
@@ -393,7 +498,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "12.00",
-    "img": "http://img3m2.ddimg.cn/79/17/25325962-1_b_3.jpg"
+    "img": "http://img3m2.ddimg.cn/79/17/25325962-1_b_3.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 
 {
@@ -405,7 +513,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://img0.kfzimg.com/operation/17/da/17daa03bd2835a7f4bef68fd6560f1c6.jpg"
+    "img": "https://img0.kfzimg.com/operation/17/da/17daa03bd2835a7f4bef68fd6560f1c6.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -416,7 +527,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://img0.kfzimg.com/operation/e7/23/e723d1e52c02f4693f3a2404ebb9bb86.jpg"
+    "img": "https://img0.kfzimg.com/operation/e7/23/e723d1e52c02f4693f3a2404ebb9bb86.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -427,7 +541,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://img0.kfzimg.com/operation/b6/64/b664e6760c1bc94c69f3065e44e0eeb5.jpgg"
+    "img": "https://img0.kfzimg.com/operation/b6/64/b664e6760c1bc94c69f3065e44e0eeb5.jpgg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -438,7 +555,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m2.ddimg.cn/64/30/23806792-1_b_1.jpg"
+    "img": "http://img3m2.ddimg.cn/64/30/23806792-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -449,7 +569,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m0.ddimg.cn/52/18/23806780-1_b_1.jpg"
+    "img": "http://img3m0.ddimg.cn/52/18/23806780-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -460,7 +583,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m6.ddimg.cn/3/25/23717136-1_b_1.jpg"
+    "img": "http://img3m6.ddimg.cn/3/25/23717136-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -471,7 +597,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m1.ddimg.cn/53/19/23806781-1_b_2.jpg"
+    "img": "http://img3m1.ddimg.cn/53/19/23806781-1_b_2.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -482,7 +611,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m7.ddimg.cn/69/35/23806797-1_b_1.jpg"
+    "img": "http://img3m7.ddimg.cn/69/35/23806797-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -493,7 +625,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "8.00",
-    "img": "http://img3m3.ddimg.cn/65/31/23806793-1_b_1.jpg"
+    "img": "http://img3m3.ddimg.cn/65/31/23806793-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -504,7 +639,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m1.ddimg.cn/63/29/23806791-1_b_1.jpg"
+    "img": "http://img3m1.ddimg.cn/63/29/23806791-1_b_1.jpg",
+    "sellPeaple": "白米丹",
+    "sellReason": "闲置",
+    "sellPeapleId": "03"
 }
 {
     "parentId": "1030",
@@ -515,7 +653,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m2.ddimg.cn/25/5/23909812-1_b_2.jpg"
+    "img": "http://img3m2.ddimg.cn/25/5/23909812-1_b_2.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -526,7 +667,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "10.00",
-    "img": "http://img3m2.ddimg.cn/74/3/23806802-1_b_1.jpg"
+    "img": "http://img3m2.ddimg.cn/74/3/23806802-1_b_1.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -537,7 +681,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m9.ddimg.cn/61/27/23806789-1_b_1.jpg"
+    "img": "http://img3m9.ddimg.cn/61/27/23806789-1_b_1.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -548,7 +695,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m7.ddimg.cn/30/10/23909817-1_b_2.jpg"
+    "img": "http://img3m7.ddimg.cn/30/10/23909817-1_b_2.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -559,7 +709,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m1.ddimg.cn/18/3/23717151-1_b_1.jpg"
+    "img": "http://img3m1.ddimg.cn/18/3/23717151-1_b_1.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -570,7 +723,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m3.ddimg.cn/15/12/25248183-1_b_3.jpg"
+    "img": "http://img3m3.ddimg.cn/15/12/25248183-1_b_3.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -581,7 +737,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m7.ddimg.cn/10/27/23909797-1_b_2.jpg"
+    "img": "http://img3m7.ddimg.cn/10/27/23909797-1_b_2.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1030",
@@ -592,7 +751,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m9.ddimg.cn/32/12/23909819-1_b_2.jpg"
+    "img": "http://img3m9.ddimg.cn/32/12/23909819-1_b_2.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 
 
@@ -606,7 +768,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m9.ddimg.cn/41/10/1405428989-1_b_1.jpg"
+    "img": "http://img3m9.ddimg.cn/41/10/1405428989-1_b_1.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1040",
@@ -617,7 +782,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m4.ddimg.cn/40/19/1396574824-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/40/19/1396574824-1_b_1.jpg",
+    "sellPeaple": "黄生文",
+    "sellReason": "毕业季，带不走",
+    "sellPeapleId": "04"
 }
 {
     "parentId": "1040",
@@ -628,7 +796,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m5.ddimg.cn/61/31/1328993485-1_b_2.jpg"
+    "img": "http://img3m5.ddimg.cn/61/31/1328993485-1_b_2.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -639,7 +810,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "3.00",
-    "img": "http://img3m6.ddimg.cn/20/23/1522874846-1_b_1.jpg"
+    "img": "http://img3m6.ddimg.cn/20/23/1522874846-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -650,7 +824,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m6.ddimg.cn/40/21/1351102936-1_b_1.jpg"
+    "img": "http://img3m6.ddimg.cn/40/21/1351102936-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -661,7 +838,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "2.00",
-    "img": "http://img3m4.ddimg.cn/2/14/1512588134-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/2/14/1512588134-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -672,7 +852,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "3.00",
-    "img": "http://img3m2.ddimg.cn/97/5/1537234972-1_b_2.jpg"
+    "img": "http://img3m2.ddimg.cn/97/5/1537234972-1_b_2.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -683,7 +866,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m2.ddimg.cn/79/10/1555882792-1_b_3.jpg"
+    "img": "http://img3m2.ddimg.cn/79/10/1555882792-1_b_3.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -694,7 +880,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m4.ddimg.cn/59/11/1503453164-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/59/11/1503453164-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -705,7 +894,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m4.ddimg.cn/34/6/1442634964-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/34/6/1442634964-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "1040",
@@ -716,7 +908,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "2.00",
-    "img": "http://img3m4.ddimg.cn/33/2/1503454524-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/33/2/1503454524-1_b_1.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 
 
@@ -729,7 +924,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m9.ddimg.cn/62/18/1304289719-1_b_3.jpg"
+    "img": "http://img3m9.ddimg.cn/62/18/1304289719-1_b_3.jpg",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 
 {
@@ -741,7 +939,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "28.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/528/820/14399028825_461151967.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/528/820/14399028825_461151967.220x220.jpg?_=2020",
+    "sellPeaple": "陈可可",
+    "sellReason": "买入多，转手",
+    "sellPeapleId": "05"
 }
 {
     "parentId": "2010",
@@ -752,7 +953,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "16.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/296/270/14055072692_73321818.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/296/270/14055072692_73321818.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -764,7 +968,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "22.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2019/683/403/11910304386_946840395.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2019/683/403/11910304386_946840395.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 {
     "parentId": "2020",
@@ -775,7 +982,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2019/490/798/10887897094_2075160290.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2019/490/798/10887897094_2075160290.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -787,7 +997,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2015/568/787/2594787865_1206336598.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2015/568/787/2594787865_1206336598.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 {
     "parentId": "2030",
@@ -798,7 +1011,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2015/568/787/2594787865_1206336598.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2015/568/787/2594787865_1206336598.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -810,7 +1026,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/232/245/14229542232_1832373871.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/232/245/14229542232_1832373871.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 {
     "parentId": "2040",
@@ -821,7 +1040,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "15.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2019/324/937/10472739423_1179825445.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2019/324/937/10472739423_1179825445.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -833,7 +1055,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "3.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/789/106/14393601987_639399817.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/789/106/14393601987_639399817.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 {
     "parentId": "2050",
@@ -844,7 +1069,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/789/106/14393601987_639399817.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/789/106/14393601987_639399817.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -856,7 +1084,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2018/758/447/9306744857_2099907588.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2018/758/447/9306744857_2099907588.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 {
     "parentId": "2060",
@@ -867,7 +1098,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2017/128/142/7586241821_911353173.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2017/128/142/7586241821_911353173.220x220.jpg?_=2020",
+    "sellPeaple": "甄宇楠",
+    "sellReason": "拼单买的，转手",
+    "sellPeapleId": "06"
 }
 
 {
@@ -879,7 +1113,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "20.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2070",
@@ -890,7 +1127,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "2.00",
-    "img": "https://cbu01.alicdn.com/img/ibank/2020/224/501/14770105422_1009697728.220x220.jpg?_=2020"
+    "img": "https://cbu01.alicdn.com/img/ibank/2020/224/501/14770105422_1009697728.220x220.jpg?_=2020",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 
 {
@@ -902,7 +1142,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "5.00",
-    "img": "http://img3m5.ddimg.cn/61/31/1328993485-1_b_2.jpg"
+    "img": "http://img3m5.ddimg.cn/61/31/1328993485-1_b_2.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -913,7 +1156,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "3.00",
-    "img": "http://img3m6.ddimg.cn/20/23/1522874846-1_b_1.jpg"
+    "img": "http://img3m6.ddimg.cn/20/23/1522874846-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -924,7 +1170,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "6.00",
-    "img": "http://img3m6.ddimg.cn/40/21/1351102936-1_b_1.jpg"
+    "img": "http://img3m6.ddimg.cn/40/21/1351102936-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -935,7 +1184,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "2.00",
-    "img": "http://img3m4.ddimg.cn/2/14/1512588134-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/2/14/1512588134-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -946,7 +1198,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "3.00",
-    "img": "http://img3m2.ddimg.cn/97/5/1537234972-1_b_2.jpg"
+    "img": "http://img3m2.ddimg.cn/97/5/1537234972-1_b_2.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -957,7 +1212,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m2.ddimg.cn/79/10/1555882792-1_b_3.jpg"
+    "img": "http://img3m2.ddimg.cn/79/10/1555882792-1_b_3.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -968,7 +1226,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m4.ddimg.cn/59/11/1503453164-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/59/11/1503453164-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -979,7 +1240,10 @@
     "address": "东区",
     "addressCode": 1,
     "price": "4.00",
-    "img": "http://img3m4.ddimg.cn/34/6/1442634964-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/34/6/1442634964-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }
 {
     "parentId": "2010",
@@ -990,5 +1254,8 @@
     "address": "东区",
     "addressCode": 1,
     "price": "2.00",
-    "img": "http://img3m4.ddimg.cn/33/2/1503454524-1_b_1.jpg"
+    "img": "http://img3m4.ddimg.cn/33/2/1503454524-1_b_1.jpg",
+    "sellPeaple": "王华安",
+    "sellReason": "闲置，转手",
+    "sellPeapleId": "07"
 }

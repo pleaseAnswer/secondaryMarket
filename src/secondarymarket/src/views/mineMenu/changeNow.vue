@@ -72,10 +72,10 @@ export default {
     },
     methods: {
         gotoMsg(id) {
-            this.$router.push({name: 'sellers', params: {id}})
+            this.$router.push({name: 'sellers', query: {id}})
         },
         gotoDetail(id) {
-            this.$router.push({name: 'goodDetail', params: {id}})
+            this.$router.push({name: 'goodDetail', query: {id}})
         }
     }
 }

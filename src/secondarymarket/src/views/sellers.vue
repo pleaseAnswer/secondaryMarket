@@ -1,44 +1,32 @@
 <template>
     <div class="sellers">
         <div class="sellers-header">
-            <van-nav-bar :title="titleName" left-text="返回" left-arrow @click-left="onClickLeft">
+            <van-nav-bar :title="sellerInfo.sellPeaple" left-text="返回" left-arrow @click-left="onClickLeft">
             </van-nav-bar>
         </div>
         <div class="sellers-msg">
             <van-cell-group>
-                <van-field v-model="xueHao" label="学号" placeholder="学号" />
-                <van-field v-model="quYu" label="区域" placeholder="区域" />
-                <van-field v-model="suShe" label="宿舍" placeholder="宿舍" />
+                <van-field v-model="sellerInfo.xueHao" label="学号" placeholder="学号" />
+                <van-field v-model="sellerInfo.address" label="区域" placeholder="区域" />
+                <van-field v-model="sellerInfo.suShe" label="宿舍" placeholder="宿舍" />
             </van-cell-group>
         </div>
         <div class="sellers-pingLun">
-            <div class="pingLun-msg">
+            <div class="pingLun-msg" v-for="(item,index) in sellerInfo.pingLun" :key="index+1">
                 <p class="pingLun-text">
-                    {{pingLunName}}：{{pingLunText}}
+                    {{item.pingLunName}}：{{item.pingLunText}}
                 </p>
-                <van-rate v-model="pingLunScore" icon="like" void-icon="like-o" />
-                <van-row >
-                    <van-col
-                    v-for="item in 3"
-                    :key="item"
-                    span="8">
-                        <img src="@/assets/img/book_1.png" alt="" />
-                    </van-col>
-                </van-row>
-            </div>
-            <div class="pingLun-msg">
-                <p class="pingLun-text">
-                    {{pingLunName}}：{{pingLunText}}
-                </p>
-                <van-rate v-model="pingLunScore" icon="like" void-icon="like-o" />
-                <van-row >
-                    <van-col
-                    v-for="item in 3"
-                    :key="item"
-                    span="8">
-                        <img src="@/assets/img/book_1.png" alt="" />
-                    </van-col>
-                </van-row>
+                <van-rate v-model="item.pingLunScore" icon="like" void-icon="like-o" />
+                <template v-if="item.pingLunImg.length">
+                    <van-row>
+                        <van-col
+                        v-for="(oitem,oindex) in item.pingLunImg"
+                        :key="oindex+1"
+                        span="8">
+                            <img :src="oitem" alt="" />
+                        </van-col>
+                    </van-row>
+                </template>
             </div>
         </div>
         <div class="sellers-conection" @click="gotoConection">
@@ -47,20 +35,35 @@
     </div>
 </template>
 <script>
-
+import { my } from '@/api';
 export default {
     name: 'sellers',
     data() {
         return {
-            titleName: '张**',
-            xueHao: '20161192****',
-            quYu: '东区',
-            suShe: '海韵',
+            sellerInfo: {
+                sellPeaple: '张**',
+                xueHao: '20161192****',
+                address: '东区',
+                suShe: '海韵',
+                pingLun: [{
+                    pingLunName: '周**',
+                    pingLunText: '评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论',
+                    pingLunScore: 4,
+                    pingLunImg: []
+
+                }]
+            },
             activeNames: ['1'],
-            pingLunName: '周**',
-            pingLunText: '评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论',
-            pingLunScore: 4,
         }
+    },
+    async created() {
+        let id = this.$route.query.id;
+        console.log(id);
+        
+        let { data } = await my.get(`/goodsList/personDetail/${id}`);
+        this.sellerInfo = data[0] 
+        console.log(this.sellerInfo);
+               
     },
     methods: {
         onClickLeft() {

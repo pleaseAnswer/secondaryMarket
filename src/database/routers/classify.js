@@ -6,9 +6,11 @@ const {find} = require('../db/mongodb');
 
 const {formatData} = require('../utils');
 
+const collectionName = 'classify'
+
 // 获取分类页列表
 Router.get('/', async (req, res) => {
-    let result = await find('classify');
+    let result = await find(collectionName);
     let data = []
     result.map(item => {
         if(item.parentId === '1') {
@@ -24,6 +26,19 @@ Router.get('/', async (req, res) => {
         }
     }
     res.send(data)
+})
+
+// 获取列表页title
+Router.get('/:id', async (req, res) => {
+    let { id } = req.params;
+    let result = await find(collectionName);
+    let data = [];
+    result.map(item => {
+        if(item.signId === id) {
+            data.push(item)
+        }
+    })
+    res.send(data[0].text)
 })
 
 

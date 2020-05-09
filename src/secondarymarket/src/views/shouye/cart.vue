@@ -59,7 +59,7 @@ export default {
         },
         gotoMsg(id) {
             console.log('卖家消息');
-            this.$router.push({name:'sellers',params:{id}})
+            this.$router.push({name:'sellers',query:{id}})
         },
     }
 }

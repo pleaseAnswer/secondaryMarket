@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         gotoEdit(id) {
-            this.$router.push({name: 'editSellMsg', params: {id}})
+            this.$router.push({name: 'editSellMsg', query: {id}})
         }
     }
 }
