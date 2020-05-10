@@ -67,7 +67,9 @@ export default {
         }
     },
     async created() {
-        let id = this.$route.params.id;
+        let id = this.$route.query.id;
+        console.log('id', this.$route);
+        
         let result = await my.get(`/goodsList/goodsDetail/${id}`);
         this.goodInfo = result.data[0]
         this.goodInfo.sellAddress=this.goodInfo.address
@@ -84,7 +86,7 @@ export default {
         },
         gotoMsg(id) {
             console.log('卖家消息', id);
-            this.$router.push({ name:'sellers',params:{ id }})
+            this.$router.push({ name:'sellers',query:{ id }})
         },
         gotoConection() {
             console.log('聊天');

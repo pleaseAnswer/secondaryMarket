@@ -26,9 +26,8 @@ async function connect() {
 async function find(colName, query = {}, options = {}) {
     
     //fields:用于过滤某些字段
-    let { fields: attr, skip, limit, sort } = options;
+    let { fields: attr, skip, limit, sort, title } = options;
     const { db, client } = await connect();
-
 
     //集合或文档操作
     // 获取集合
@@ -41,8 +40,15 @@ async function find(colName, query = {}, options = {}) {
 
     //promise对象--.toArray()才能拿到结果
 
-    let result = await collection.find( query, {attr}).toArray();
-    
+    // db.user.find({age:{$in:[null],$exists:true}}) //查找age属性存在但值为null的数据
+    // 模糊查询
+    let result = '' 
+    if(title) {
+        result = await collection.find({title:{$regex:title}}).toArray();
+    } else {
+        result = await collection.find({}).toArray();
+    }
+
     //跳过数量
     if (skip) {
         result = result.skip(skip);
@@ -60,15 +66,15 @@ async function find(colName, query = {}, options = {}) {
         let arr = sort.split(',');
         let key = arr[0];
         let value = arr[1] ? arr[1] * 1 : -1;
-
+        
         result = result.sort({
             // [sort]:-1
             [key]: value
         });
     }
 
+    
     client.close();
-
     return result;
 }
 

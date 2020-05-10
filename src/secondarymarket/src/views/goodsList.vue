@@ -47,10 +47,10 @@ export default {
             keyValue: '',
             sortType: 0,
             sortList: [
-                { text: '价格升序', value: 0 },
-                { text: '价格降序', value: 1 },
-                { text: '最新', value: 2 },
-                { text: '发布时间', value: 3 },
+                { text: '默 认', value: 0 },
+                { text: '东 区', value: 3 },
+                { text: '西 区', value: 4 },
+                { text: '中 区', value: 5 },
             ],
             isShowSearch: false,
             booksList: [
@@ -67,6 +67,7 @@ export default {
     watch: {
         sortType() {
             console.log(this.sortType);
+            this.getList()
         },
         id() {
             this.getList()
@@ -83,12 +84,13 @@ export default {
             this.$router.push({ name: 'goodDetail', query: {id} })
         },
         showSearch() {
-            this.isShowSearch = true;
-            this.titleName = '';
+            // this.isShowSearch = true;
+            // this.titleName = '';
+            this.$router.push({ name: 'searchGoods' })
         },
         async getList() {
             this.id = Number(this.$route.query.id);
-            let { data } = await my.get(`/goodsList/${this.id}`);
+            let { data } = await my.get(`/goodsList/${this.id}?sortType=${this.sortType}`);
             this.booksList = data;
             let { data: title } = await my.get(`/classify/${this.id}`);
             this.titleName = title 

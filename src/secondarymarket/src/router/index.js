@@ -112,6 +112,14 @@ const router = new VueRouter({
         },
         component: () => import('@/views/goodsList'),
     },{
+        name: 'searchGoods',
+        path: '/searchGoods',
+        meta: {
+            title: '搜索列表',
+            requireAuth: false
+        },
+        component: () => import('@/views/searchGoods'),
+    },{
         name: 'goodDetail',
         path: '/goodDetail',
         meta: {
