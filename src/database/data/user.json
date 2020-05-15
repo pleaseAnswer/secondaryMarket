@@ -1,0 +1,55 @@
+{
+    "id": "01",
+    "xuehao": "201611921835",
+    "mobile": "13590096811",
+    "password": "yuexin123",
+    "isBuyed": { "signId": ["101010", "202020"]},
+    "isSelled": { "signId": ["101011", "202022"]},
+    "sellNow": { "signId": ["101011", "202022"]},
+    "changNow": { 
+        "selling":{"signId": ["101011","202022"]},
+        "buying":{"signId": ["101011", "202022"]}
+    }
+}
+{
+    "signId": "1010",
+    "parentId": "10",
+    "text" : "教科书",
+    "imgUrl" : "http://img2.imgtn.bdimg.com/it/u=1126327252,2560711258&fm=26&gp=0.jpg"
+}
+{
+    "signId": "101010",
+    "parentId": "1010",
+    "title": "马克思主义基本原理概论",
+    "new": "九成新",
+    "newCode": 9,
+    "address": "东区",
+    "addressCode": 1, // 1-东区 2-中区 3-西区
+    "price": "10.00",
+    "img": "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg",
+    "xiangqing": "教科书，闲置，转手，很新，笔记不多，字迹清晰。",
+    "sellPeaple": "张花花",
+    "sellReason": "毕业季",
+    "sellPeapleId": "01",
+    "selled": 0 // 0-未交易 1-正在交易 2-确认交易
+}
+{
+    "sellPeaple": "张花花",
+    "sellPeapleId": "01",
+    "xueHao": "20161192****",
+    "address": "东区",
+    "suShe": "海韵",
+    "addressCode": 1,
+    "pingLun": [{
+        "pingLunName": "周**",
+        "pingLunText": "东西都很新，也很便宜，很好呀",
+        "pingLunScore": 5,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    },{
+        "pingLunName": "黄**",
+        "pingLunText": "东西棒",
+        "pingLunScore": 4,
+        "pingLunImg": ["https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020","https://cbu01.alicdn.com/img/ibank/2020/688/590/13330095886_539104953.220x220.jpg?_=2020"]
+    }],
+    "shoucang": {"signId": ["101010", "202020"]}
+}
