@@ -7,9 +7,9 @@
         <van-tabs v-model="active" color="#4378ba">
             <van-tab title="正在买入">
                 <!-- 内容1 -->
-                <div v-for="item in changeGoodsList" :key="item.id" style="padding:5px 0 5px 5px;">
+                <van-swipe-cell v-for="item in changeBuyGoodsList" :key="item.id" style="padding:5px 0 5px 5px;" >
                     <div class="changeNow-card" @click="gotoDetail(item.id)">
-                        <img src="@/assets/img/book_1.png" alt="">
+                        <img :src="item.imgSrc" alt="">
                         <div class="changeNow-card-desc">
                             <p class="changeNow-desc-title">{{item.title}}</p>
                             <p class="changeNow-desc-sellers">卖家：<span @click.self.stop="gotoMsg(1)">{{item.sellers}}</span></p>
@@ -17,13 +17,17 @@
                             <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
                         </div>
                     </div>
-                </div>
+                    <template #right>
+                        <van-button square text="取消交易" type="danger" class="delete-button" />
+                        <van-button square text="确认成交" type="primary" class="delete-button" />
+                    </template>
+                </van-swipe-cell>
             </van-tab>
             <van-tab title="正在转手">
                 <!-- 正在转手 -->
-                <div v-for="item in changeGoodsList" :key="item.id" style="padding:5px 0 5px 5px;">
+                <van-swipe-cell v-for="item in changeSellGoodsList" :key="item.id" style="padding:5px 0 5px 5px;">
                     <div class="changeNow-card" @click="gotoDetail(item.id)">
-                        <img src="@/assets/img/book_1.png" alt="">
+                        <img :src="item.imgSrc" alt="">
                         <div class="changeNow-card-desc">
                             <p class="changeNow-desc-title">{{item.title}}</p>
                             <p class="changeNow-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">{{item.buyer}}</span></p>
@@ -31,7 +35,10 @@
                             <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
                         </div>
                     </div>
-                </div>
+                    <template #right>
+                        <van-button square text="取消交易" type="danger" class="delete-button" />
+                    </template>
+                </van-swipe-cell>
             </van-tab>
         </van-tabs>
     </div>
@@ -43,30 +50,23 @@ export default {
     data() {
         return {
             active: 0,
-            changeGoodsList: [{
+            changeBuyGoodsList: [{
                 id: 1,
-                title: '肖申克的救赎',
+                title: 'A5本子',
                 sellers: '张**',
-                buyer: '张**',
+                buyer: '黄**',
                 price: '￥2.00',
                 address: '海韵',
-                imgSrc: '@/assets/img/book_1.png'
-            },{
-                id: 2,
-                title: '肖申克的救赎',
+                imgSrc: require('@/assets/img/A5benzi.jpg')
+            }],
+            changeSellGoodsList: [{
+                id: 1,
+                title: '三个火枪手',
                 sellers: '张**',
-                buyer: '张**',
-                price: '￥2.00',
+                buyer: '黄**',
+                price: '￥10.00',
                 address: '海韵',
-                imgSrc: '@/assets/img/book_1.png'
-            },{
-                id: 3,
-                title: '肖申克的救赎',
-                sellers: '张**',
-                buyer: '张**',
-                price: '￥2.00',
-                address: '海韵',
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/huayuan.jpg')
             }],
         }
     },
@@ -132,5 +132,8 @@ export default {
             text-align: right;
         }
     }
+}
+.delete-button {
+    height: 100%;
 }
 </style>

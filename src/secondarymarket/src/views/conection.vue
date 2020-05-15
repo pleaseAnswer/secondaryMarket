@@ -27,6 +27,10 @@
                 <van-icon name="more-o" size="18" />
             </template>
         </van-nav-bar>
+        <div class="saying-content">你好呀，你什么时候有空，我想买你的“杀死一只知更鸟”</div>
+        <div class="saying-wrap">
+            <div class="saying"></div>
+        </div>
     </div>
 </template>
 <script>
@@ -48,6 +52,40 @@ export default {
     }
 }
 </script>
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+@function vw($px){
+  @return ($px / 375) * 100vw;
+}
+.conection {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+.saying-wrap{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: vw(60);
+    background: #ddd;
+    box-sizing: border-box;
+}
+.saying {
+    margin: vw(10) ;
+    width: vw(355);
+    height: vw(40);
+    background: #fff;
+    border-radius: vw(5);
+    box-sizing: border-box;
+}
+.saying-content {
+    width: vw(250);
+    background: green;
+    border-radius: vw(5);
+    padding: vw(5);
+    color: #fff;
+    position: absolute;
+    top: vw(60);
+    right: vw(5);
+}
 </style>

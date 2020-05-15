@@ -67,16 +67,16 @@ export default {
         return {
             lunboList: [{
                 id: 1,
-                imgUrl: require('@/assets/img/yaoyao.jpg'),
+                imgUrl: require('@/assets/img/school_1.jpg'),
             },{
                 id: 2,
-                imgUrl: require('@/assets/img/dongqu.png'),
+                imgUrl: require('@/assets/img/school_2.jpg'),
             },{
                 id: 3,
-                imgUrl: require('@/assets/img/xiqu.png'),
+                imgUrl: require('@/assets/img/school_3.jpeg'),
             },{
                 id: 4,
-                imgUrl: require('@/assets/img/zhongqu.png'),
+                imgUrl: require('@/assets/img/school_4.jpg'),
             }],
             commitList: []
         }
@@ -121,11 +121,12 @@ export default {
 }
 .banner {
     padding-top: vw(112);
+    height: vw(416);
 }
 .my-swipe .van-swipe-item {
     img {
         width: 100%;
-        height: 100%;
+        height: vw(416);
     }
 }
 .menu {

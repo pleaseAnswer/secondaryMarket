@@ -3,7 +3,7 @@
     <div class="isBuyed">
         <van-swipe-cell v-for="item in isBuyedGoodsList" :key="item.id" style="padding:5px 0 5px 5px;" >
             <div class="isBuyed-card" @click="gotoDetail(item.id)">
-                <img src="@/assets/img/book_1.png" alt="">
+                <img :src="item.imgSrc" alt="">
                 <div class="isBuyed-card-desc">
                     <p class="isBuyed-desc-title">{{item.title}}</p>
                     <p class="isBuyed-desc-sellers">卖家：<span @click.self.stop="gotoMsg(1)">{{item.sellers}}</span></p>
@@ -31,28 +31,28 @@ export default {
         return {
             isBuyedGoodsList: [{
                 id: 1,
-                title: '肖申克的救赎',
+                title: '口袋本子',
                 pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
-                sellers: '张**',
+                sellers: '周**',
                 price: '￥2.00',
                 hasPingLun: 0,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/benzi.jpg')
             },{
                 id: 2,
-                title: '肖申克的救赎',
-                pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
-                sellers: '张**',
-                price: '￥2.00',
+                title: '茶花女',
+                pingLun: '书很新，而且是正版的',
+                sellers: '陈**',
+                price: '￥10.00',
                 hasPingLun: 1,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/chahuanv.jpg')
             },{
                 id: 3,
-                title: '肖申克的救赎',
-                pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
-                sellers: '张**',
-                price: '￥2.00',
+                title: '杀死一只知更鸟',
+                pingLun: '我很喜欢的一本书，而且书的质量感觉很好',
+                sellers: '吴**',
+                price: '￥12.00',
                 hasPingLun: 1,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/kill_bird.jpg')
             }],
         }
     },

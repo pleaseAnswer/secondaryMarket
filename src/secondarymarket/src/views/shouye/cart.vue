@@ -7,7 +7,7 @@
         <div class="cart-main">
             <van-swipe-cell v-for="item in cartGoodsList" :key="item.id" style="padding:5px 0 5px 5px;">
                 <div class="cart-card">
-                    <img src="@/assets/img/book_1.png" alt="">
+                    <img :src="item.imgSrc" alt="">
                     <div class="cart-card-desc">
                         <p class="cart-desc-title">{{item.title}}</p>
                         <p class="cart-desc-text">{{item.text}}</p>
@@ -31,25 +31,18 @@ export default {
         return {
             cartGoodsList: [{
                 id: 1,
-                title: '肖申克的救赎',
-                text: '九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著',
-                sellers: '张**',
-                price: '￥2.00',
-                imgSrc: '@/assets/img/book_1.png'
+                title: '手账本',
+                text: '闲置，转手',
+                sellers: '王**',
+                price: '￥4.00',
+                imgSrc: 'http://img3m4.ddimg.cn/34/6/1442634964-1_b_1.jpg'
             },{
                 id: 2,
-                title: '肖申克的救赎',
-                text: '九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著',
+                title: '马克思主义基本原理概论',
+                text: '毕业季',
                 sellers: '张**',
-                price: '￥2.00',
-                imgSrc: '@/assets/img/book_1.png'
-            },{
-                id: 3,
-                title: '肖申克的救赎',
-                text: '九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著九成新名著',
-                sellers: '张**',
-                price: '￥2.00',
-                imgSrc: '@/assets/img/book_1.png'
+                price: '￥10.00',
+                imgSrc: 'http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg'
             }],
         }
     },

@@ -3,7 +3,7 @@
     <div class="isSelled">
         <van-swipe-cell v-for="item in isSelledGoodsList" :key="item.id" style="padding:5px 0 5px 5px;" >
             <div class="isSelled-card" @click="gotoDetail(item.id)">
-                <img src="@/assets/img/book_1.png" alt="">
+                <img :src="item.imgSrc" alt="">
                 <div class="isSelled-card-desc">
                     <p class="isSelled-desc-title">{{item.title}}</p>
                     <p class="isSelled-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">{{item.buyer}}</span></p>
@@ -28,28 +28,28 @@ export default {
         return {
             isSelledGoodsList: [{
                 id: 1,
-                title: '肖申克的救赎',
-                pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
-                buyer: '张**',
-                price: '￥2.00',
+                title: '镜子',
+                pingLun: '镜子很小巧，很新呢，感觉挺不错的',
+                buyer: '袁**',
+                price: '￥1.00',
                 hasPingLun: 0,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/jinzi.jpg')
             },{
                 id: 2,
-                title: '肖申克的救赎',
-                pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
+                title: '洗发水',
+                pingLun: '卖家说拼单买的，确实很划算',
                 buyer: '张**',
-                price: '￥2.00',
+                price: '￥22.00',
                 hasPingLun: 1,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/xifashui.jpg')
             },{
                 id: 3,
-                title: '肖申克的救赎',
-                pingLun: '一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分一百分',
-                buyer: '张**',
-                price: '￥2.00',
+                title: '纸巾',
+                pingLun: '拼单活动价，挺便宜的',
+                buyer: '陈**',
+                price: '￥10.00',
                 hasPingLun: 1,
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/zhijin.jpg')
             }],
         }
     },
