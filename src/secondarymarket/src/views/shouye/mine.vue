@@ -13,8 +13,9 @@
                 <van-icon name="arrow" size="20" color="#152941" @click="gotoLogin"/>
             </div>
             <div class="mine-isLogin" v-else>
-                <img src="@/assets/img/book_1.png" alt="">
+                <img src="@/assets/img/avatarF.png" alt="">
                 <div class="mine-isLogin-msg">
+                    <p class="mine-logout">退出登录</p>
                     <p class="mine-name">{{mineName}}</p>
                     <p class="mine-address">地址：{{mineAddress}}</p>
                     <p class="mine-msg">学号：{{mineNum}}</p>
@@ -55,7 +56,7 @@ export default {
     data() {
         return {
             isUnLogin: false,
-            mineName: '张**',
+            mineName: '周悦欣',
             mineAddress: '东区海韵',
             mineNum: 201611921835,
             oSign: {
@@ -195,5 +196,13 @@ export default {
     .classborder {
         border-bottom: vw(10) solid #4378ba;
     }
+}
+.mine-logout {
+    float: right;
+    border: 1px solid #4378ba;
+    background: #4378ba;
+    color: #fff;
+    border-radius: vw(20);
+    padding: vw(10);
 }
 </style>

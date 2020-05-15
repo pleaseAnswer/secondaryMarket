@@ -3,7 +3,7 @@
     <div class="selledNow">
         <van-swipe-cell class="selledNow-good" v-for="item in goodsList" :key="item.id">
             <article class="selledNow-goods-main">
-                <img src="@/assets/img/book_1.png" alt="">
+                <img :src="item.imgSrc" alt="">
                 <div class="main-text">
                     <p class="main-title">{{item.title}}</p>
                     <p class="main-address">区域：{{item.address}}</p>
@@ -26,28 +26,12 @@ export default {
         return {
             goodsList: [{
                 id: 1,
-                title: '肖申克的救赎',
-                price: '￥2.00',
+                title: '罪与罚',
+                price: '￥12.00',
                 address: '海韵',
-                xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
+                xiangQing: '很经典的一本书，看完了，还是很新的哦',
                 sellReason: '闲置',
-                imgSrc: '@/assets/img/book_1.png'
-            },{
-                id: 2,
-                title: '肖申克的救赎',
-                price: '￥2.00',
-                address: '海韵',
-                xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
-                sellReason: '闲置',
-                imgSrc: '@/assets/img/book_1.png'
-            },{
-                id: 3,
-                title: '肖申克的救赎',
-                price: '￥2.00',
-                address: '海韵',
-                xiangQing: '九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新九成新',
-                sellReason: '闲置',
-                imgSrc: '@/assets/img/book_1.png'
+                imgSrc: require('@/assets/img/zuiyufa.jpg')
             }],
         }
     },

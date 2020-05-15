@@ -15,6 +15,7 @@
                 <van-field v-model="title" label="标题" name="标题" placeholder="标题" :rules="[{ required: true, message: '请填写标题' }]" />
                 <van-field v-model="price" type="number" label="价格" name="价格" placeholder="价格" :rules="[{ required: true, message: '请填写价格' }]" />
                 <van-field v-model="address" label="区域" name="区域" placeholder="区域" :rules="[{ required: true, message: '请填写区域' }]" />
+                <van-field v-model="newCode" label="几成新" name="几成新" placeholder="几成新" :rules="[{ required: true, message: '请填写几成新' }]" />
                 <van-field v-model="sellReason" label="转手原因" name="转手原因" placeholder="转手原因" :rules="[{ required: true, message: '请填写转手原因' }]" />
                 <van-field v-model="xiangQing" label="详情" name="详情" placeholder="详情" :rules="[{ required: true, message: '请填写详情' }]" />
                 <div style="margin: 16px;">
@@ -36,6 +37,7 @@ export default {
             xiangQing: '',
             price: '',
             address: '',
+            newCode: '',
             sellReason: '',
             fileList: [
                 { url: 'https://img.yzcdn.cn/vant/leaf.jpg' },
