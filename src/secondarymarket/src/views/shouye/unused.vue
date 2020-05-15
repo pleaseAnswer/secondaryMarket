@@ -13,6 +13,10 @@
                     </template>
                 </van-field>
                 <van-field v-model="title" label="标题" name="标题" placeholder="标题" :rules="[{ required: true, message: '请填写标题' }]" />
+                <van-field readonly clickable name="picker" :value="value" label="类别" placeholder="点击选择类别" @click="showPicker = true" />
+                <van-popup v-model="showPicker" position="bottom">
+                    <van-picker show-toolbar :columns="columns" @confirm="onConfirm" @cancel="showPicker = false" />
+                </van-popup>
                 <van-field v-model="price" type="number" label="价格" name="价格" placeholder="价格" :rules="[{ required: true, message: '请填写价格' }]" />
                 <van-field v-model="address" label="区域" name="区域" placeholder="区域" :rules="[{ required: true, message: '请填写区域' }]" />
                 <van-field v-model="newCode" label="几成新" name="几成新" placeholder="几成新" :rules="[{ required: true, message: '请填写几成新' }]" />
@@ -45,7 +49,13 @@ export default {
                 // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
                 { url: 'https://cloud-image', isImage: true },
             ],
+            value: '',
+            columns: ["图书 教科书","图书 考级资料","图书 名著", "图书 笔记本", "图书 其它"],
+            showPicker: false,
         }
+    },
+    created() {
+
     },
     methods: {
         afterRead(file) {
@@ -53,6 +63,10 @@ export default {
         },
         onSubmit(values) {
             console.log('submit', values);
+        },
+        onConfirm(value) {
+            this.value = value;
+            this.showPicker = false;
         },
     }
 }

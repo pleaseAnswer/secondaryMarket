@@ -30,6 +30,8 @@ import {
   Collapse, 
   CollapseItem,
   Form,
+  Picker,
+  Popup,
   Field,
   Cell, 
   CellGroup,
@@ -40,7 +42,7 @@ import {
   Uploader,
   Tab,
   Tabs,
-  Image as VanImage
+  Image as VanImage,
 } from 'vant';
 Vue.use(Icon)
   .use(Tabbar)
@@ -59,6 +61,8 @@ Vue.use(Icon)
   .use(Collapse)
   .use(CollapseItem)
   .use(Form)
+  .use(Picker)
+  .use(Popup)
   .use(Field)
   .use(Cell)
   .use(CellGroup)
