@@ -10,7 +10,7 @@
             <div class="login-main">
                 <van-tabs v-model="active" color="#4378ba">
                     <van-tab title="登录" style="margin-top: 10px;">
-                        <van-form @submit="onSubmitLogin">
+                        <van-form>
                             <van-field v-model="login.username" clearable name="账号" label="账号" placeholder="请输入学号/手机号" :rules="[{ required: true, message: '请输入学号/手机号' }]" />
                             <van-field v-model="login.password" clearable type="password" name="密码" label="密码" placeholder="请输入密码" :rules="[{ required: true, message: '请输入密码' }]" />
                             <div class="forget-password" @click="gotoReset">忘记密码</div>
@@ -22,7 +22,7 @@
                         </van-form>
                     </van-tab>
                     <van-tab title="注册">
-                        <van-form @submit="onSubmitSignIn">
+                        <van-form>
                             <van-field v-model="signIn.xuehao" clearable name="学号" label="学号" placeholder="请输入学号" :rules="[{ required: true, message: '请输入学号' }]"  />
                             <van-field v-model="signIn.mobile" clearable type="mobile" label="手机号" placeholder="请输入手机号" :rules="[{ required: true, message: '请输入手机号' }]" />
                             <van-field v-model="signIn.sms" center clearable label="短信验证码" placeholder="请输入短信验证码" >
@@ -33,7 +33,7 @@
                             <van-field v-model="signIn.password" clearable type="password" name="密码" label="密码" placeholder="请输入密码" :rules="[{ required: true, message: '请输入密码' }]" />
                             <van-field v-model="signIn.password2" clearable type="password" name="确认密码" label="确认密码" placeholder="请再次输入密码" :rules="[{ required: true, message: '请再次输入密码' }]" />
                             <div style="margin: 16px;">
-                                <van-button round block type="info" native-type="submit" @click.native.prevent="handleLogin">
+                                <van-button round block type="info" native-type="submit" @click.native.prevent="handleRegister">
                                 注册
                                 </van-button>
                             </div>
@@ -45,7 +45,7 @@
     </div>
 </template>
 <script>
-
+import { my } from '@/api';
 export default {
     name: 'login',
     data() {
@@ -60,15 +60,29 @@ export default {
         onClickLeft() {
             this.$router.go(-1);
         },
-        onSubmitLogin(values) {
-            console.log('onSubmitLogin', values);
-        }, 
-        onSubmitSignIn(values) {
-            console.log('onSubmitSignIn', values);
-        },
         gotoReset() {
             this.$router.push({name: 'forgetmm'})
-        }
+        },
+        async handleLogin() {
+            console.log(123);
+            if(!this.login.username && !this.login.password) {
+                this.$notify({ type: 'warning', message: '请完善登录信息' });
+            } else if(!this.login.username) {
+                this.$notify({ type: 'warning', message: '请输入学号/手机号' });
+            } else if(!this.login.password) {
+                this.$notify({ type: 'warning', message: '请输入密码' });
+            } else {
+                // 发送请求
+                let result = await my.post('/user',this.login)
+                console.log('result',result);
+                
+            }
+            
+        },
+        handleRegister() {
+            console.log(111);
+
+        },
     }
 }
 </script>

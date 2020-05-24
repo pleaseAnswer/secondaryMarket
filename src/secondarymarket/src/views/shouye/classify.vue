@@ -61,11 +61,13 @@ export default {
         return {
             items: [],
             // activeId: 1,
-            active: 0,
+            active: this.$route.params.id ? this.$route.params.id : 0,
         }
     },
     created() {
         this.getList();
+        this.$store.state.active = 1
+        console.log('classi',this.$store.state.active);
     },
     methods: {
         goto(id) {

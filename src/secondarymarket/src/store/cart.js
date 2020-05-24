@@ -1,6 +1,7 @@
 let cart = ({
     state: {
-        menu: []
+        menu: [],
+        active: 0,
     },
     getters: {
         cartlength(state) {

@@ -27,19 +27,19 @@
         </section>
         <section class="menu">
             <van-grid :gutter="10" :border='false' :column-num="4">
-                <van-grid-item>
+                <van-grid-item @click="gotoClassify(0)">
                     <i class="iconfont icon-tushu" style="padding: 5px;font-size:42px; color: rgb(112,140,190);"></i>
                     <p>图书</p>
                 </van-grid-item>
-                <van-grid-item>
+                <van-grid-item @click="gotoClassify(1)">
                     <i class="iconfont icon-RectangleCopy" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i>
                     <p>生活百货</p>
                 </van-grid-item>
-                <van-grid-item>
+                <van-grid-item @click="gotoClassify(2)">
                     <i class="iconfont icon-shuishengzhiwu-" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i>
                     <p>饰品</p>
                 </van-grid-item>
-                <van-grid-item>
+                <van-grid-item @click="gotoClassify(3)">
                     <i class="iconfont icon-shiwu-" style="padding: 9px;font-size:38px; color: rgb(112,140,190)"></i>
                     <p>食物</p>
                 </van-grid-item>
@@ -49,8 +49,8 @@
             <section v-for="item in commitList" :key="item.id">
                 <p class="recommend-text">-----{{item.title}}-----</p>
                 <van-row gutter="20">
-                    <van-col span="6" v-for="ele in item.list" :key="ele.id">
-                        <div class="recommend-item">
+                    <van-col span="6" v-for="ele in item.list" :key="ele.id" >
+                        <div class="recommend-item" @click="goto(ele.signId)">
                             <img :src="ele.img" alt="" style="width: 100%;height: 80%">
                         </div>
                     </van-col>
@@ -83,13 +83,21 @@ export default {
     },
     created() {
         this.getCommitList();
+        sessionStorage.setItem('homeAct', 0)
+        this.$store.state.active = 0
+        console.log('home',this.$store.state.active);
     },
     methods: {
         async getCommitList() {
             let { data } = await my.get('/commit');
             console.log(data);
             this.commitList = data[0].commitList;
-            
+        },
+        gotoClassify(option) {
+            this.$router.push({name:'classify',params: {id:option}})
+        },
+        goto(id) {
+            this.$router.push({ name: 'goodDetail', query: {id} })
         },
     }
 }

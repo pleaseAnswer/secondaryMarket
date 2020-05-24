@@ -7,6 +7,7 @@ const { token, formatData } = require('../utils');
 const classifyRouter = require('./classify');
 const goodsListRouter = require('./goodsList');
 const commitRouter = require('./commit');
+const userRouter = require('./user');
 
 // 跨域解决方案CORS
 Router.use((req, res, next) => {
@@ -36,6 +37,7 @@ Router.use(express.json(), express.urlencoded({extended:false}));
 Router.use('/classify', classifyRouter);
 Router.use('/goodsList', goodsListRouter);
 Router.use('/commit', commitRouter);
+Router.use('/user', userRouter);
 
 // 检验token
 Router.get('/verify', (req, res) => {

@@ -26,7 +26,7 @@ async function connect() {
 async function find(colName, query = {}, options = {}) {
     
     //fields:用于过滤某些字段
-    let { fields: attr, skip, limit, sort, title } = options;
+    let { fields: attr, skip, limit, sort, title, username, password } = options;
     const { db, client } = await connect();
 
     //集合或文档操作
@@ -48,6 +48,23 @@ async function find(colName, query = {}, options = {}) {
     } else {
         result = await collection.find({}).toArray();
     }
+    // or查询
+    console.log('username',username);
+    
+    if(username) {
+        result = await collection.find({
+            username:{$or:
+                [
+                 {$and:[{"mobile":username},{"password":password}]},
+                 {$and:[{"xuehao":username},{"password":password}]}
+                ]
+              }}).toArray();
+        console.log('result', result);
+        
+    } else {
+        result = await collection.find({}).toArray();
+    }
+    
 
     //跳过数量
     if (skip) {

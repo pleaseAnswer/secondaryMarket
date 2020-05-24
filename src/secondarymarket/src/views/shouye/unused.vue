@@ -55,7 +55,9 @@ export default {
         }
     },
     created() {
-
+        sessionStorage.setItem('homeAct', 2)
+        this.$store.state.active = 2
+        console.log('unused',this.$store.state.active);
     },
     methods: {
         afterRead(file) {

@@ -55,7 +55,7 @@ export default {
     name: 'mine',
     data() {
         return {
-            isUnLogin: false,
+            isUnLogin: true,
             mineName: '周悦欣',
             mineAddress: '东区海韵',
             mineNum: 201611921835,
@@ -68,8 +68,10 @@ export default {
             oIndex: 1,
         }
     },
-    created: {
-        
+    created() {
+        sessionStorage.setItem('homeAct', 4)
+        this.$store.state.active = 4
+        console.log('mine',this.$store.state.active);
     },
     methods: {
         gotoYimai() {

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import Vuex from 'vuex'
+Vue.use(Vuex)
 
 import store from './store'
 Vue.prototype.$store = store;
@@ -42,6 +44,7 @@ import {
   Uploader,
   Tab,
   Tabs,
+  Notify,
   Image as VanImage,
 } from 'vant';
 Vue.use(Icon)
@@ -73,6 +76,7 @@ Vue.use(Icon)
   .use(Uploader)
   .use(Tab)
   .use(Tabs)
+  .use(Notify)
   .use(VanImage)
   .use(Lazyload,{
     lazyComponent: true,

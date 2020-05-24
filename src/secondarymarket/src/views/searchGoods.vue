@@ -38,20 +38,6 @@
                     </div>
                 </van-col>
             </van-row>
-           <!-- <ul>
-                <li class="list"  v-for="(item, index) in searchData" :key="index" @click="goDetail(item.id)">
-                    <div class="pic">
-                        <img :src="item.imagePath" alt="">
-                    </div>
-                    <div class="text">
-                        <span class="name"> {{item.name}}</span>
-                    <p class="price">
-                        <span>{{(item.price*0.8).toFixed(2)}}</span>
-                        <del>{{item.price}}</del>
-                    </p>
-                    </div>
-                </li>
-            </ul> -->
             <div class="tishi" v-show="isShowSearch">
                 <i class="el-icon-warning-outline iconpic"></i>
                 <span class="spText">抱歉，找不到您想要的结果</span>
@@ -126,6 +112,7 @@ export default {
                 this.show = false;
             } else {
                 this.isShowSearch = true;
+                this.islist = false;
                 this.show = false;
             }
             this.booksList = data
@@ -134,6 +121,7 @@ export default {
             if(this.input1==''){
                 this.show=true
                 this.searchData=[]
+                this.islist = false;
                 this.isShowSearch=false
             }
         },

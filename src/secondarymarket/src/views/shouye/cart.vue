@@ -46,6 +46,11 @@ export default {
             }],
         }
     },
+    created() {
+        sessionStorage.setItem('homeAct', 3)
+        this.$store.state.active = 3
+        console.log('cart',this.$store.state.active);
+    },
     methods: {
          onClickLeft() {
             this.$router.go(-1);
@@ -54,7 +59,7 @@ export default {
             console.log('卖家消息');
             this.$router.push({name:'sellers',query:{id}})
         },
-    }
+    },
 }
 </script>
 <style lang="scss" scoped>

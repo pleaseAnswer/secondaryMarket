@@ -28,9 +28,18 @@ export default {
   name: 'container',
   data() {
     return {
-      active: 0,
       cartlength: 0,
+      active: 0
     }
+  },
+  watch: {
+    active() {
+      return this.$store.state.active;
+    }
+  },
+
+  methods: {
+
   }
 }
 </script>
