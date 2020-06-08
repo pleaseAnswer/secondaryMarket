@@ -1,3 +1,114 @@
+
+{
+    "id" : 1,
+    "title" : "图书",
+    "list" : [ 
+        {
+            "id" : 11,
+            "parentId" : "1010",
+            "signId" : "101010",
+            "title" : "马克思主义基本原理概论",
+            "new" : "九成新",
+            "newCode" : 9,
+            "address" : "东区",
+            "addressCode" : 1,
+            "price" : "10.00",
+            "img" : "http://img1.imgtn.bdimg.com/it/u=1939818077,346860422&fm=26&gp=0.jpg",
+            "sellPeaple" : "张花花",
+            "sellReason" : "毕业季",
+            "sellPeapleId" : "01"
+        }, 
+        {
+            "parentId" : "1010",
+            "signId" : "101011",
+            "title" : "思修与近代史",
+            "new" : "九成新",
+            "newCode" : 9,
+            "address" : "西区",
+            "addressCode" : 3,
+            "price" : "10.00",
+            "img" : "http://pic8.58cdn.com.cn/zhuanzh/n_v26d51b3a826a84b9e9f66135834e49184_338_282.jpg",
+            "sellPeaple" : "张花花",
+            "sellReason" : "毕业季",
+            "sellPeapleId" : "01"
+        }, 
+        {
+            "id" : 13,
+            "img" : "http://img14.360buyimg.com/n0/jfs/t14731/39/854944955/121485/6c0b6de9/5a3bbb67N7be8d4e6.png"
+        }, 
+        {
+            "id" : 14,
+            "img" : "http://img2.imgtn.bdimg.com/it/u=1126327252,2560711258&fm=26&gp=0.jpg"
+        }
+    ]
+}
+{
+    "id" : 2,
+    "title" : "生活百货",
+    "list" : [ 
+        {
+            "id" : 21,
+            "img" : "http://file.youboy.com/a/36/62/2/2/15498582.jpg"
+        }, 
+        {
+            "id" : 22,
+            "img" : "http://img005.hc360.cn/g1/M01/1B/55/wKhQL1HHmk-EP5pPAAAAAORIzJM040.jpg"
+        }, 
+        {
+            "id" : 23,
+            "img" : "http://img3.imgtn.bdimg.com/it/u=1675031842,1930609079&fm=26&gp=0.jpg"
+        }, 
+        {
+            "id" : 24,
+            "img" : "http://pic1.cxtuku.com/00/16/02/b4386a86f32e.jpg"
+        }
+    ]
+}
+{
+    "id" : 3,
+    "title" : "饰品",
+    "list" : [ 
+        {
+            "id" : 31,
+            "img" : "http://img4.imgtn.bdimg.com/it/u=1282446417,1849083259&fm=26&gp=0.jpg"
+        }, 
+        {
+            "id" : 32,
+            "img" : "http://img2.imgtn.bdimg.com/it/u=3228625142,1551389404&fm=15&gp=0.jpg"
+        }, 
+        {
+            "id" : 33,
+            "img" : "http://image.cn.made-in-china.com/prodzip/000-cvyQesKFwhoP.jpg"
+        }, 
+        {
+            "id" : 34,
+            "img" : "http://img004.hc360.cn/hb/30491273a81D96E6FF6a0FB41D30E8a0a6.jpg"
+        }
+    ]
+}
+{
+    "id" : 4,
+    "title" : "食物",
+    "list" : [ 
+        {
+            "id" : 41,
+            "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3410000516,4287312270&fm=26&gp=0.jpg"
+        }, 
+        {
+            "id" : 42,
+            "img" : "http://img.yzcdn.cn/upload_files/2018/12/20/FsQp89qeblKhYou-PPGWUzplj15F.jpg?imageView2/2/w/580/h/580/q/75/format/jpg"
+        }, 
+        {
+            "id" : 43,
+            "img" : "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3423938124,4035399544&fm=26&gp=0.jpg"
+        }, 
+        {
+            "id" : 44,
+            "img" : "http://file.youboy.com/d/161/2/79/8/816598.jpg?"
+        }
+    ]
+}
+    
 {
     "parentId": "1010",
     "signId": "101010",

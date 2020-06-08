@@ -1,4 +1,15 @@
 {
+    "sellPeapleId" : 1590985510477.0,
+    "id": 1591028327980.0,
+    "list": [{
+        "code": "sellPeapleId",
+        "text": "你好鸭"
+    },{
+        "code": "id",
+        "text": "你好"
+    }]
+}
+{
     "text" : "图书",
     "signId": "10",
     "parentId": "1"

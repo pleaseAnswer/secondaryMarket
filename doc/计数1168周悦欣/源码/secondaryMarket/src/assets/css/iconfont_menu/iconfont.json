@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1368557",
+      "name": "闲置",
+      "font_class": "lie-b",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "3522452",
+      "name": "图书",
+      "font_class": "tushu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "4889667",
+      "name": "交易",
+      "font_class": "jiaoyi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "4889717",
+      "name": "买入",
+      "font_class": "mairu",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "4889728",
+      "name": "卖出",
+      "font_class": "maichu",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "5163699",
+      "name": "水生植物-01",
+      "font_class": "shuishengzhiwu-",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "5737689",
+      "name": "食物-9",
+      "font_class": "shiwu-",
+      "unicode": "ebc9",
+      "unicode_decimal": 60361
+    },
+    {
+      "icon_id": "7549816",
+      "name": "商品",
+      "font_class": "RectangleCopy",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    }
+  ]
+}
