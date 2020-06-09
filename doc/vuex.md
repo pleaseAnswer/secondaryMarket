@@ -219,4 +219,158 @@ export default {
 
 ## Mutation
 
+> 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。
+> Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数。
 
+```js
+store.commit('increment')
+// 任何由 "increment" 导致的状态变更都应该在此刻完成。
+```
+
+```js
+const store = new Vuex.Store({
+    state: {
+        count: 1
+    },
+    mutations: {
+        increment (state) {
+            // 变更状态
+            state.count++
+        }
+    }
+})
+```
+
+* 不能直接调用一个 mutation handler。
+* 这个选项更像是事件注册：当触发一个类型为 increment 的 mutation 时，调用此函数。要唤醒一个 mutation handler，你需要以相应的 type 调用 store.commit 方法
+
+```js
+store.commit('increment')
+```
+
+### 提交载荷（Payload）
+
+* 可以向 store.commit 传入额外的参数，即 mutation 的 载荷（payload）
+  
+```js
+mutations: {
+    increment (state, n) {
+        state.count += n
+    }
+}
+```
+
+```js
+store.commit('increment', 10)
+```
+
+* 大多数情况下，载荷应该是一个对象，这样可以包含多个字段并且记录的 mutation 会更易读
+
+```js
+mutations: {
+    increment (state, payload) {
+        state.count += payload.amount
+    }
+}
+```
+
+```js
+store.commit('increment', {
+    amount: 10
+})
+```
+
+### 对象风格的提交方式
+
+* 提交 mutation 的另一种方式是直接使用包含 type 属性的对象
+  
+```js
+store.commit({
+    type: 'increment',
+    amount: 10
+})
+```
+
+* 当使用对象风格的提交方式，整个对象都作为载荷传给 mutation 函数，因此 handler 保持不变
+
+```js
+mutations: {
+    increment (state, payload) {
+        state.count += payload.amount
+    }
+}
+```
+
+### Mutation 必须是同步函数
+
+> 每一条 mutation 被记录，devtools 都需要捕捉到前一状态和后一状态的快照。
+> 任何在回调函数中进行的状态的改变都是不可追踪的。
+
+```js
+mutations: {
+    someMutation (state) {
+        api.callAsyncMethod(() => {
+            state.count++
+        })
+    }
+}
+```
+
+### 在组件中提交Mutation
+
+* 可以在组件中使用 this.$store.commit('xxx') 提交 mutation
+* 或者使用 mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）
+
+```js
+import { mapMutations } from 'vuex'
+
+export default {
+    methods: {
+        ...mapMutations([
+            'increment', // 将 `this.increment()` 映射为 `this.$store.commit('increment')`
+
+            // `mapMutations` 也支持载荷：
+            'incrementBy' // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+        ]),
+        ...mapMutations({
+            add: 'increment' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+        })
+    }
+}
+```
+
+## Action
+
+* Action 类似于 mutation，不同在于：
+
+> Action 提交的是 mutation，而不是直接变更状态。
+> Action 可以包含任意异步操作。
+
+```js
+const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        increment (state) {
+            state.count++
+        }
+    },
+    actions: {
+        increment (context) {
+          context.commit('increment')
+        }
+    }
+})
+```
+
+* Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象
+* 可以调用 context.commit 提交一个 mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters。
+
+```js
+actions: {
+    increment ({ commit }) {
+        commit('increment')
+    }
+}
+```
