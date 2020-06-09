@@ -23,7 +23,8 @@
             输出的文件路径是相对于本文件的路径
             * */
             path: './dist',  //输出路径
-            filename: '[name].bundle.js'     //输出文件名，文件可以自己定义，[name]的意思是与入口文件的文件对应，可以不用[name]，
+            //输出文件名，文件可以自己定义，[name]的意思是与入口文件的文件对应，可以不用[name]
+            filename: '[name].bundle.js'
             publicPath: process.env.NODE_ENV === 'production'
                         ? config.build.assetsPublicPath
                         : config.dev.assetsPublicPath // 公共资源路径
@@ -57,9 +58,33 @@
         /*
         * 插件使用  
         **/　 
-       plugins: [
+        plugins: [
            // 在打包后生成html文件，它以src下的index.html为模板
            new HtmlWebpackPlugin({template: 'src/index.html'}),
-       ]
+       ],
+
+       // webpack相关配置
+       // [Object | Function] -> 基于webpack-merge
+       // Object -> 合并至最终配置中   Function -> 会接收被解析的配置作为参数
+       configureWebpack: {
+
+       },
+
+       // 用于改变原devserver配置项的默认行为
+       devServer: {
+            // [String | Object]
+            // 若前端应用和后端API没有运行在同一主机，需在开发环境下将API请求代理到API服务器
+            proxy: {
+                '/api': {
+                    target: 'http://192.168.7.251:1282',
+                    changeOrigin: true,
+                    pathRewrite: {
+                        '^/api': ''
+                    },
+                    secure: false,
+                    ws: true
+                }
+            }
+       }
     }
 ```
