@@ -19,8 +19,8 @@
 * 每一个 Vuex 应用的核心就是 store（仓库）。store 基本上就是一个容器，它包含着应用中大部分的状态 (state)。
 * Vuex 和单纯的全局对象有以下两点不同：
 
-    > Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。
-    > 不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。
+    *1*. Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。
+    *2*. 不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。
 
 * 创建一个store -> 提供一个初始state对象和一些mutation
 
@@ -374,3 +374,105 @@ actions: {
     }
 }
 ```
+
+### 分发Actions
+
+* Actions通过 store.dispatch方法触发
+
+```js
+store.dispatch('increment')
+```
+
+```js
+actions: {
+    incrementAsync({ commit }) {
+        setTimeout(() => {
+            commit('increment')
+        }, 1000)
+    }
+}
+```
+
+* Actions支持同样的载荷方式和对象方式进行发布
+
+```js
+store.dispatch('incrementAsync', {
+    amount: 10
+})
+```
+
+```js
+store.dispatch({
+    type: 'incrementAsync',
+    amount: 10
+})
+```
+
+### 在组件中分发Action
+
+* 在组件中使用 this.$store.dispatch('xxx') 分发 action
+* 或者使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用（需要先在根节点注入 store）
+
+```js
+export default {
+    methods: {
+        ...mapActions([
+            'increment', // 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`
+
+            // `mapActions` 也支持载荷：
+            'incrementBy' // 将 `this.incrementBy(amount)` 映射为 `this.$store.dispatch('incrementBy', amount)`
+        ]),
+        ...mapActions({
+            add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+        })
+    }
+}
+
+```
+
+### 组合Action
+
+* store.dispatch可以处理倍触发的 action的处理函数返回的 Promise，并且store.dispatch 仍旧返回 Promise
+
+```js
+actions: {
+    actionA ({ commit }) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                commit('someMutation')
+                resolve()
+            }, 1000)
+        })
+    }
+}
+```
+
+```js
+store.dispatch('actionA').then(() => {
+    //...
+})
+```
+
+```js
+actions: {
+    actionB({ dispatch, commit }) {
+        return dispatch('actionA').then(() => {
+            commit('someOtherMutation')
+        })
+    }
+}
+```
+
+```js
+actions: {
+    async actionA({ commit }) {
+        commit('gotData', await getData())
+    },
+    async actionB({ dispatch, commit }) {
+        await dispatch('actionA') // 等待actionA完成
+        commit('gotOtherData', await getOtherData())
+    }
+}
+```
+
+* 一个 store.dispatch 在不同模块中可以触发多个 action 函数。在这种情况下，只有当所有触发函数完成后，返回的 Promise 才会执行。

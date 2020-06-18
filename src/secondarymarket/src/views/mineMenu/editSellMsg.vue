@@ -9,7 +9,7 @@
                 </template>
             </van-field> -->
             <van-field v-model="title" label="标题" name="title" placeholder="标题" :rules="[{ required: true, message: '请填写标题' }]" />
-            <van-field v-model="price" type="number" label="价格" name="price" placeholder="价格" :rules="[{ required: true, message: '请填写价格' }]" />
+            <!-- <van-field v-model="price" type="number" label="价格" name="price" placeholder="价格" :rules="[{ required: true, message: '请填写价格' }]" /> -->
             <van-field v-model="address" label="区域" name="address" placeholder="区域" :rules="[{ required: true, message: '请填写区域' }]" />
             <van-field v-model="sellReason" label="转手原因" name="sellReason" placeholder="转手原因" :rules="[{ required: true, message: '请填写转手原因' }]" />
             <van-field v-model="xiangQing" label="详情" name="xiangQing" placeholder="详情" :rules="[{ required: true, message: '请填写详情' }]" />

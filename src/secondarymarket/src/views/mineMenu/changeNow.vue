@@ -14,7 +14,7 @@
                             <p class="changeNow-desc-title">{{item.title}}</p>
                             <p class="changeNow-desc-sellers">卖家：<span @click.self.stop="gotoMsg(item.sellPeapleId)">{{item.sellPeaple}}</span></p>
                             <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p>
-                            <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
+                            <!-- <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p> -->
                         </div>
                     </div>
                     <template #right>
@@ -32,7 +32,7 @@
                             <p class="changeNow-desc-title">{{item.title}}</p>
                             <p class="changeNow-desc-sellers">买家：<span @click.self.stop="gotoMsg(item.sellers[0])">{{item.buyPeaple}}</span></p>
                             <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p>
-                            <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p>
+                            <!-- <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p> -->
                         </div>
                     </div>
                     <!-- <template #right>
@@ -139,7 +139,7 @@ export default {
         .changeNow-desc-title {
             height: vw(52);
             font-size: vw(32);
-            line-height: vw(52);
+            line-height: vw(72);
             color: #460404;
             font-weight: bold;
             width: vw(480);  //元素一定要有宽度
@@ -151,7 +151,7 @@ export default {
         .changeNow-desc-addr {
             height: vw(38);
             font-size: vw(24);
-            line-height: vw(38);
+            line-height: vw(58);
             color: #333;
             span {
                 font-size: vw(28);

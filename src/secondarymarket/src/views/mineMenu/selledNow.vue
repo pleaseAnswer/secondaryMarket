@@ -8,7 +8,7 @@
                     <p class="main-title">{{item.title}}</p>
                     <p class="main-address">区域：{{item.address}}</p>
                     <p class="main-address">转手原因：{{item.sellReason}}</p>
-                    <p class="main-price">￥{{item.price}}</p>
+                    <!-- <p class="main-price">￥{{item.price}}</p> -->
                 </div>
                 <p class="msg-xiangQing">详情：{{item.xiangQing}}</p>
             </article>

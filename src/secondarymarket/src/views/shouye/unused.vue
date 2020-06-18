@@ -13,24 +13,22 @@
                     </template>
                 </van-field>
                 <van-field v-model="title" label="标题" name="title" placeholder="标题"/>
-                <van-field readonly clickable name="classify" v-model="classify" :value="classify" label="类别" placeholder="点击选择类别" @click="showPicker = true" />
-                <van-popup v-model="showPicker" position="bottom">
+                <!-- <van-field readonly clickable name="classify" v-model="classify" :value="classify" label="类别" placeholder="点击选择类别" @click="showPicker = true" /> -->
+                <!-- <van-popup v-model="showPicker" position="bottom">
                     <van-picker show-toolbar :columns="columns" @confirm="onConfirm" @cancel="showPicker = false" />
-                </van-popup>
-                <van-field v-model="price" type="number" label="价格" name="price" placeholder="价格"/>
-                <!-- <van-field v-model="address" label="区域" name="address" placeholder="区域"/> -->
+                </van-popup> -->
+                <!-- <van-field v-model="price" type="number" label="价格" name="price" placeholder="价格"/> -->
                 <van-field readonly clickable name="address" v-model="address" :value="address" label="区域" placeholder="点击选择区域" @click="showPickerAddress = true" />
                 <van-popup v-model="showPickerAddress" position="bottom">
                     <van-picker show-toolbar :columns="columnsAddress" @confirm="onConfirmAddress" @cancel="showPickerAddress = false" />
                 </van-popup>
-                <!-- <van-field v-model="newCode" label="几成新" name="newCode" placeholder="几成新"/> -->
                 <van-field readonly clickable name="newCode" v-model="newCode" :value="newCode" label="几成新" placeholder="点击选择几成新" @click="showPickernewCode = true" />
                 <van-popup v-model="showPickernewCode" position="bottom">
                     <van-picker show-toolbar :columns="columnsnewCode" @confirm="onConfirmnewCode" @cancel="showPickernewCode = false" />
                 </van-popup>
                 <van-field v-model="sellReason" label="转手原因" name="sellReason" placeholder="转手原因"/>
                 <van-field v-model="xiangQing" label="详情" name="xiangQing" placeholder="详情" />
-                <div style="margin: 16px;">
+                <div style="margin: 100px 16px 16px;">
                     <van-button round block type="info" native-type="submit">
                         提交
                     </van-button>

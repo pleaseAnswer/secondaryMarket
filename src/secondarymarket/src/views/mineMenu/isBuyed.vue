@@ -7,7 +7,7 @@
                 <div class="isBuyed-card-desc">
                     <p class="isBuyed-desc-title">{{item.title}}</p>
                     <p class="isBuyed-desc-sellers">卖家：<span @click.self.stop="gotoMsg(item.sellPeapleId)">{{item.sellPeaple}}</span></p>
-                    <p class="isBuyed-desc-pric">￥{{item.price}}</p>
+                    <!-- <p class="isBuyed-desc-pric">￥{{item.price}}</p> -->
                     <section>
                         <span class="isBuyed-desc-pingLunTitle">评论：</span>
                         <p class="isBuyed-desc-pingLun">{{item.pingLun ? item.pingLun : '待评论...'}}</p>

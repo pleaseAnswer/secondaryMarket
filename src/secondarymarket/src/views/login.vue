@@ -43,6 +43,10 @@
                         <van-form>
                             <van-field v-model="signIn.xuehao" readonly="" name="xuehao" label="学号" placeholder="请输入学号" :rules="[{ required: true, message: '请输入学号' }]"  />
                             <van-field v-model="signIn.sellPeaple" clearable name="sellPeaple" label="姓名" placeholder="请输入姓名" :rules="[{ required: true, message: '请输入姓名' }]" />
+                            <van-field readonly clickable name="sex" v-model="signIn.sex" :value="signIn.sex" label="性别" placeholder="点击选择性别" @click="showPicker = true" />
+                            <van-popup v-model="showPicker" position="bottom">
+                                <van-picker show-toolbar :columns="columns" @confirm="onConfirm" @cancel="showPicker = false" />
+                            </van-popup>
                             <!-- <van-field v-model="signIn.address" clearable name="address" label="区域" placeholder="请输入所在区域" :rules="[{ required: true, message: '请输入所在区域' }]" /> -->
                             <van-field readonly clickable name="address" v-model="signIn.address" :value="signIn.address" label="区域" placeholder="点击选择区域" @click="showPicker = true" />
                             <van-popup v-model="showPicker" position="bottom">
@@ -78,7 +82,7 @@ export default {
             isGet: false,
             daojishi: 60,
             ruleForm: {},
-            isShow: false,
+            isShow: true,
             showPicker: false,
             columns: ["东区","西区","中区"],
             showPickersuShe: false,

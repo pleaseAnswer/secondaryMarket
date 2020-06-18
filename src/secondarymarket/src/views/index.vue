@@ -13,9 +13,9 @@
         style="padding-top: 5px;position: fixed;left: 0;bottom: 0;z-index:1200 ;border-top: 1px solid #ccc;box-shadow: 10px 10px 10px #333;"
       >
         <van-tabbar-item icon="wap-home-o" to="/shouye">首页</van-tabbar-item>
-        <van-tabbar-item icon="qr" to="/classify">分类</van-tabbar-item>
+        <!-- <van-tabbar-item icon="qr" to="/classify">分类</van-tabbar-item> -->
         <van-tabbar-item icon="gold-coin-o" to="/unused">卖闲置</van-tabbar-item>
-        <van-tabbar-item icon="like-o" to="/cart" :info="cartlength">我的收藏</van-tabbar-item>
+        <van-tabbar-item icon="search" to="/searchGoods">搜索页</van-tabbar-item>
         <van-tabbar-item icon="user-o" to="/mine">我的</van-tabbar-item>
       </van-tabbar>
     </footer>

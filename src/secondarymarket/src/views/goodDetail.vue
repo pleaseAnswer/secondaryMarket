@@ -5,20 +5,20 @@
         <div class="figure">
             <div class="img">
                 <img :src="goodInfo.img" alt="">
-                <div class="img-shoucang" @click="gotoSava(id)" v-if="isShow">
+                <!-- <div class="img-shoucang" @click="gotoSava(id)" v-if="isShow">
                     <template v-if="isShixing">
                         <van-icon name="like" color='#c55' size="60"/>
                     </template>
                     <template v-else>
                         <van-icon name="like-o" color='#c55' size="60"/>
                     </template>
-                </div>
+                </div> -->
             </div>
             <div class="figcaption">
                 <p class="img-title">{{goodInfo.title}}</p>
                 <p class="img-text">
                     <i class="img-text-new">{{goodInfo.new}}</i>
-                    <i class="img-text-price">￥{{goodInfo.price}}</i>
+                    <!-- <i class="img-text-price">￥{{goodInfo.price}}</i> -->
                 </p>
                 <p class="reasonText">
                     转卖原因：<span class="text-sell">{{goodInfo.sellReason}}</span>

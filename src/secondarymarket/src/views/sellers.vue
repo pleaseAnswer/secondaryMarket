@@ -9,6 +9,7 @@
                 <van-field v-model="sellerInfo.xueHao" label="学号" placeholder="学号" />
                 <van-field v-model="sellerInfo.address" label="区域" placeholder="区域" />
                 <van-field v-model="sellerInfo.suShe" label="宿舍" placeholder="宿舍" />
+                <van-field v-model="sellerInfo.sex" label="性别" placeholder="性别" />
             </van-cell-group>
         </div>
         <div class="sellers-pingLun">
@@ -45,6 +46,7 @@ export default {
                 xueHao: '20161192****',
                 address: '东区',
                 suShe: '海韵',
+                sex: '男',
                 pingLun: [{
                     pingLunName: '周**',
                     pingLunText: '评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论',
