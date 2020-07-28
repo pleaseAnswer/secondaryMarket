@@ -1,9 +1,11 @@
 <template>
 <!-- 卖闲置: 表单 图片-上传 标题 详情 价格 区域 -->
     <div class="unused">
-        <div class="unused-header">
-            <p>卖闲置</p>
-        </div>
+        <!-- <div class="unused-header"> -->
+            <van-nav-bar title="卖闲置" left-text="返回" left-arrow @click-left="onClickLeft" class="unused-header">
+            </van-nav-bar>
+            <!-- <p>卖闲置</p> -->
+        <!-- </div> -->
         <div class="unused-main">
             <van-form @submit="onSubmit">
                 <van-field name="fileList" label="文件上传">
@@ -18,17 +20,17 @@
                     <van-picker show-toolbar :columns="columns" @confirm="onConfirm" @cancel="showPicker = false" />
                 </van-popup> -->
                 <!-- <van-field v-model="price" type="number" label="价格" name="price" placeholder="价格"/> -->
-                <van-field readonly clickable name="address" v-model="address" :value="address" label="区域" placeholder="点击选择区域" @click="showPickerAddress = true" />
-                <van-popup v-model="showPickerAddress" position="bottom">
+                <!-- <van-field readonly clickable name="address" v-model="address" :value="address" label="区域" placeholder="点击选择区域" @click="showPickerAddress = true" /> -->
+                <!-- <van-popup v-model="showPickerAddress" position="bottom">
                     <van-picker show-toolbar :columns="columnsAddress" @confirm="onConfirmAddress" @cancel="showPickerAddress = false" />
-                </van-popup>
-                <van-field readonly clickable name="newCode" v-model="newCode" :value="newCode" label="几成新" placeholder="点击选择几成新" @click="showPickernewCode = true" />
-                <van-popup v-model="showPickernewCode" position="bottom">
+                </van-popup> -->
+                <!-- <van-field readonly clickable name="newCode" v-model="newCode" :value="newCode" label="几成新" placeholder="点击选择几成新" @click="showPickernewCode = true" /> -->
+                <!-- <van-popup v-model="showPickernewCode" position="bottom">
                     <van-picker show-toolbar :columns="columnsnewCode" @confirm="onConfirmnewCode" @cancel="showPickernewCode = false" />
-                </van-popup>
-                <van-field v-model="sellReason" label="转手原因" name="sellReason" placeholder="转手原因"/>
-                <van-field v-model="xiangQing" label="详情" name="xiangQing" placeholder="详情" />
-                <div style="margin: 100px 16px 16px;">
+                </van-popup> -->
+                <!-- <van-field v-model="sellReason" label="转手原因" name="sellReason" placeholder="转手原因"/> -->
+                <!-- <van-field v-model="xiangQing" label="详情" name="xiangQing" placeholder="详情" /> -->
+                <div style="margin: 300px 16px 16px;">
                     <van-button round block type="info" native-type="submit">
                         提交
                     </van-button>
@@ -153,7 +155,10 @@ export default {
         onConfirmnewCode(newCode) {
             this.newCode = newCode;
             this.showPickernewCode = false;
-        }
+        },
+        onClickLeft() {
+            this.$router.go(-1);
+        },
     }
 }
 </script>
@@ -173,11 +178,14 @@ export default {
     top: 0;
     left: 0;
     z-index: 1000;
+    color: #fff;
     p {
       text-align: center;
-      color: #fff;
       font-size: vw(48);
       line-height: vw(110);
+    }
+    .van-nav-bar__text {
+        color: #fff;
     }
 }
 .unused-main {

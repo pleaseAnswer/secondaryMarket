@@ -20,9 +20,9 @@
                     <i class="img-text-new">{{goodInfo.new}}</i>
                     <!-- <i class="img-text-price">￥{{goodInfo.price}}</i> -->
                 </p>
-                <p class="reasonText">
+                <!-- <p class="reasonText">
                     转卖原因：<span class="text-sell">{{goodInfo.sellReason}}</span>
-                </p>
+                </p> -->
                 <p class="nameText">
                     卖家：<span class="text-sell" @click="gotoMsg(goodInfo.sellPeapleId)">{{goodInfo.sellPeaple}}</span>
                 </p>
@@ -187,7 +187,7 @@ export default {
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: vw(200);
+        bottom: vw(250);
         right: vw(20);
         z-index: 10000;
     }

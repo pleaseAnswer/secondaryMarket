@@ -1,9 +1,8 @@
 <template>
 <!-- 我的：个人中心 -->
     <div class="mine">
-        <div class="mine-header">
-            <p>个人中心</p>
-        </div>
+            <van-nav-bar title="卖闲置" left-text="返回" left-arrow @click-left="onClickLeft" class="mine-header">
+            </van-nav-bar>
         <div class="mine-main">
             <div class="mine-login" v-if="isUnLogin">
                 <div class="mine-login-img">
@@ -123,6 +122,9 @@ export default {
             .catch(() => {
                 // on cancel
             });
+        },
+        onClickLeft() {
+            this.$router.go(-1);
         },
     }
 }

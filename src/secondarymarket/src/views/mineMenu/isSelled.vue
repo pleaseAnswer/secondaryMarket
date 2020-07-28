@@ -6,12 +6,12 @@
                 <img :src="item.img" alt="">
                 <div class="isSelled-card-desc">
                     <p class="isSelled-desc-title">{{item.title}}</p>
-                    <!-- <p class="isSelled-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">{{item.buyer}}</span></p> -->
+                    <p class="isSelled-desc-sellers">买家：<span @click.self.stop="gotoMsg(1)">李乐乐</span></p>
                     <!-- <p class="isSelled-desc-pric">￥{{item.price}}</p> -->
-                    <!-- <section>
+                    <section>
                         <span class="isSelled-desc-pingLunTitle">评论：</span>
                         <p class="isSelled-desc-pingLun">{{item.hasPingLun ? item.pingLun : '待评论...'}}</p>
-                    </section> -->
+                    </section>
                 </div>
             </div>
             <template #right>

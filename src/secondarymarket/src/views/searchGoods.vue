@@ -31,7 +31,7 @@
                                 </p>
                                 <p>
                                     <i class="list-text-where">{{item.address}}</i>
-                                    <i class="list-text-price">￥{{item.price}}</i>
+                                    <!-- <i class="list-text-price">￥{{item.price}}</i> -->
                                 </p>
                             </figcaption>
                         </figure>

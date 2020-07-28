@@ -31,7 +31,7 @@
                         <div class="changeNow-card-desc">
                             <p class="changeNow-desc-title">{{item.title}}</p>
                             <p class="changeNow-desc-sellers">买家：<span @click.self.stop="gotoMsg(item.sellers[0])">{{item.buyPeaple}}</span></p>
-                            <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p>
+                            <!-- <p class="changeNow-desc-addr">交易地点：<span>{{item.address}}</span></p> -->
                             <!-- <p class="changeNow-desc-pric">价格：<span>{{item.price}}</span></p> -->
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 <!-- 首页 -->
     <div class="shouye">
         <header class="header">
-            <p>海大交易</p>
+            <p>海大新鱼</p>
         </header>
         <section class="banner">
             <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -27,25 +27,29 @@
         </section>
         <section class="menu">
             <van-grid :gutter="10" :border='false' :column-num="4">
-                <van-grid-item @click="gotoClassify(0)">
-                    <i class="iconfont icon-tushu" style="padding: 5px;font-size:42px; color: rgb(112,140,190);"></i>
-                    <p>图书</p>
+                <van-grid-item @click="gotoClassify('unused')">
+                    <!-- <i class="iconfont icon-tushu" style="padding: 5px;font-size:42px; color: rgb(112,140,190);"></i> -->
+                    <!-- <p>图书</p> -->
+                    <van-icon name="gold-coin-o" color='rgb(112,140,190)' size="60"/>
+                    <p>卖闲置</p>
                 </van-grid-item>
-                <van-grid-item @click="gotoClassify(1)">
-                    <i class="iconfont icon-RectangleCopy" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i>
-                    <p>生活百货</p>
+                <van-grid-item @click="gotoClassify('searchGoods')">
+                    <!-- <i class="iconfont icon-RectangleCopy" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i> -->
+                    <van-icon name="search" color='rgb(112,140,190)' size="60"/>
+                    <p>搜索</p>
                 </van-grid-item>
-                <van-grid-item @click="gotoClassify(2)">
-                    <i class="iconfont icon-shuishengzhiwu-" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i>
-                    <p>饰品</p>
+                <van-grid-item @click="gotoClassify('mine')">
+                    <!-- <i class="iconfont icon-shuishengzhiwu-" style="padding: 5px;font-size:42px; color: rgb(112,140,190)"></i> -->
+                    <van-icon name="user-o" color='rgb(112,140,190)' size="60"/>
+                    <p>我的</p>
                 </van-grid-item>
-                <van-grid-item @click="gotoClassify(3)">
+                <!-- <van-grid-item @click="gotoClassify(3)">
                     <i class="iconfont icon-shiwu-" style="padding: 9px;font-size:38px; color: rgb(112,140,190)"></i>
                     <p>食物</p>
-                </van-grid-item>
+                </van-grid-item> -->
             </van-grid>
         </section>
-        <section class="recommend">
+        <!-- <section class="recommend">
             <section v-for="item in commitList" :key="item.id">
                 <p class="recommend-text">-----{{item.title}}-----</p>
                 <van-row gutter="20">
@@ -56,7 +60,7 @@
                     </van-col>
                 </van-row>
             </section>
-        </section>
+        </section> -->
     </div>
 </template>
 <script>
@@ -94,7 +98,8 @@ export default {
             this.commitList = data;
         },
         gotoClassify(option) {
-            this.$router.push({name:'classify',params: {id:option}})
+            // this.$router.push({name:'classify',params: {id:option}})
+            this.$router.push({name:option})
         },
         goto(id) {
             this.$router.push({ name: 'goodDetail', query: {id} })

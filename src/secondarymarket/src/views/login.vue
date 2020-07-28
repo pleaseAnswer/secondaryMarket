@@ -82,7 +82,7 @@ export default {
             isGet: false,
             daojishi: 60,
             ruleForm: {},
-            isShow: true,
+            isShow: false,
             showPicker: false,
             columns: ["东区","西区","中区"],
             showPickersuShe: false,
