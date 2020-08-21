@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="demo">
+        <h1>初始化流程</h1>
+        <!-- <p id="p1" v-if="foo">{{ foo }}</p> -->
+        <comp></comp>
+    </div>
+
+    <script>
+        Vue.component('comp', {
+            template: `
+                <div>I am comp</div>
+            `
+        })
+
+        const app = new Vue({
+            el: '#demo',
+            // template:'<div>template</div>',
+            // template: '#app',
+            // render(h){ return h('div', 'render') },
+            data: {
+                // foo: {
+                //     a: 100
+                // },
+                foo: 'ready~~'
+            },
+            mounted() {
+                // this.foo = Math.random()
+                // console.info("1:" + this.foo)
+                // this.foo = Math.random()
+                // console.info("2:" + this.foo)
+                // this.foo = Math.random()
+                // console.info("3:" + this.foo)
+
+                // console.info("刚开始" + p1.innerHTML)
+
+                // this.$nextTick(() => {
+                //     console.info("nextTick", this.foo)
+                // })
+
+                // setTimeout(() => {
+                //     this.foo = 'fssssssssss'
+                // }, 1000)
+            }
+
+        })
+    </script>
+</body>
+
+</html>

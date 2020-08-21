@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<pick-components title="{{title}}" cancelText="{{cancelText}}" pickList="{{pickList}}" wx:if="{{pickList.length != 0}}" bind:myevent="makeSureOption" id="pickComponent"></pick-components>
+<view class="container">
+  性别：<input type="text" name="gender" id="gender" value="{{gender}}" data-name="genderList" bindtap="showPicker"></input>
+  证件类型：<input type="text" name="zjType" id="zjType" value="{{zjType}}" data-name="zjTypeList" bindtap="showPicker"></input>
+  你今年几岁：<input type="text" name="age" id="age" value="{{age}}" data-name="ageList" bindtap="showPicker"></input>
+</view>

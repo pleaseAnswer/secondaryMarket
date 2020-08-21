@@ -1,0 +1,11 @@
+<view class="picker-container-wrap" wx:if="{{isShow}}">
+  <view class="picker-box-bg"  catchtap="cancelShow"></view>
+  <view class="picker-container">
+    <view class="picker-title">{{title}}</view>
+    <view class="pick-item-wrap">
+      <view class="picker-item" wx:for="{{pickList}}" wx:key="index" data-code="{{item.code}}" data-value="{{item.value}}" catchtap="sureOption">
+        {{item.value}}
+      </view>
+    </view>
+  </view>
+</view>

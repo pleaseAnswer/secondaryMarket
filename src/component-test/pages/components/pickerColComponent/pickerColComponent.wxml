@@ -1,0 +1,23 @@
+<view class="picker-container-wrap" wx:if="{{isShow}}">
+  <view class="picker-box-bg" catchtap="cancelShow"></view>
+  <view class="picker-container">
+    <view class="picker-title">
+      <view class="picker-title-cancel" data-type="0" bindtap="sureOption">{{cancelText}}</view>
+      <view class="picker-title-text">{{title}}</view>
+      <view class="picker-title-sure" data-type="1" bindtap="sureOption">确定</view>
+    </view>
+    <view class="pick-item-wrap">
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}"  bindchange="bindchange">
+        <picker-view-column>
+          <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

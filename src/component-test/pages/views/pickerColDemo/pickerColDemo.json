@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pick-col-components": "/pages/components/pickerColComponent/pickerColComponent"
+  }
+}

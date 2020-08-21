@@ -1,0 +1,7 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view bindtap="goto" data-name="pickerDemo">下拉弹框</view>
+  <view bindtap="goto" data-name="pickerDemo2">下拉弹框</view>
+  <view bindtap="goto" data-name="pickerColDemo">多级联动下拉弹框</view>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pick-components": "/pages/components/pickerComponent2/pickerComponent2"
+  }
+}

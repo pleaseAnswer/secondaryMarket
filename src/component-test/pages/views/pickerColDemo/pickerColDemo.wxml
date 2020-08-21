@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<pick-col-components title="{{title}}" cancelText="{{cancelText}}" bind:myevent="makeSureOption" id="pickComponent"></pick-col-components>
+<view class="container">
+  出生日期：<input type="text" name="birth" id="birth" value="{{birth}}" data-name="birthList" bindtap="showPicker"></input>
+  
+</view>

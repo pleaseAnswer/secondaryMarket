@@ -266,6 +266,81 @@ goto(e) {
 
 ```
 
+* 高阶函数
+  * 接收函数作为参数或者返回函数的函数
+![Image](./img/gaojie.png)
+
+```js
+/**
+ * 检验规则
+ *   大于18岁
+ *   密码长度大于8
+ *   统一用户协议
+ * */
+const newUser = {
+    age: 24,
+    password: 'some long password',
+    agreeToTerms: true
+}
+function oldEnough(user) {
+    return user.age >= 18;
+}
+function passwordLongEnough(user) {
+    return user.password.length >= 8;
+}
+function agreeToTerms(user) {
+    return user.agreeToTerms === true;
+}
+
+// 高阶函数 --> 一次性完成所有验证
+function validate(obj, ...tests) {
+    for(let i = 0; i < tests.length; i++) {
+        if(tests[i](obj) === false) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// 使用
+const newUser1 = {
+    age: 40,
+    password: 'qwertyuio',
+    agreeToTerms: true
+}
+validate(newUser1, oldEnough, passwordLongEnough, agreeToTerms);
+// true
+
+const newUser2 = {
+    age: 40,
+    password: 'qwer',
+    agreeToTerms: true
+}
+validate(newUser1, oldEnough, passwordLongEnough, agreeToTerms);
+// false
+
+// 遵循最少知识原则
+function createValidator(...tests) {
+    return function(obj) {
+        for(let i = 0; i < tests.length; i++) {
+            if(tests[i](obj) === false) {
+              return false;
+          }
+        }
+        return true;
+    };
+}
+
+// 使用
+const userValidator = createValidator(
+    oldEnough,
+    passwordLongEnough,
+    agreeToTerms
+);
+userValidator(newUser1); // true
+userValidator(newUser2); // false
+```
+
 ## ES6
 
 * let关键字
@@ -397,3 +472,76 @@ getPhoto(e) {
     reader.readAsDataURL(file)
 },
 ```
+
+## 面试题
+
+* 项目如果重构你会选择重构哪些地方？重构的方法以及必要性？
+* vuex的用法，vuex和bus总线的区别
+  * vuex是一个专门为vue.js程序开发的状态管理模式，
+  * vuex实现数据共享，跨组件传参，适用大型项目;
+  * bus当组件层级嵌套不深的时候可以用，适用于小型项目
+
+* vue的响应式原理，以及get set分别做了什么
+  * vue在实例化时会遍历data下的属性，并通过object.defineProperty()把这些属性转为setter getter，并写入vue的实例。
+  * setter的时候会收集依赖，getter的时候会触发依赖。
+
+* js的执行机制
+  > 异步
+  * 微任务：Promise process.nextTick
+  * 宏任务：整体代码script setTimeout setInterval
+  * 微队列为空时执行宏队列
+    > async 语法操作符[不算同步，不算异步]
+    > async -> await promise
+
+* 异步编程
+  * 实现异步编程的方法有哪些？
+    * async && await
+    * promise
+    * 回调
+
+  * 怎么理解async && await, async && await 怎么来的？
+    * async && await 都是函数定义的关键字。await用于等待Promise对象的返回结果，且不能单独使用而必须放在async函数中；利用async定义的函数会返回一个Promise对象，async函数的返回值就是Promise状态为resolved的返回值。
+    * async && await 使得异步代码看起来像同步代码。
+    * async await 是基于Promise实现的，他不能用于普通的回调函数。
+
+  * async && await 和 promise的用法的区别，举例
+    * await 关键字只能用在async定义的函数内，async函数会隐式地返回一个promise，该promise的resolve值就是函数return的值。
+
+  * async && await 和 promise的性能区别在哪里
+    * 使用async函数会让代码简洁很多，不需要像Promise一样需要写then，不需要写匿名函数处理Promise的resolve值，也不需要定义多余的data变量，还避免了嵌套代码。
+    * 错误处理
+      * async await 让try/catch 可以同时处理同步和异步错误。在Promise中try/catch不能处理JSON.parse,需要使用.catch。
+      * 使用async await catch能处理JSON.parse错误。
+
+    ```js
+    // 调用promise1，使用promise1返回的结果去调用promise2，然后使用两者的结果去调用promise3
+    const makeRequest = () => {
+      return promise1().then(value1 => {
+        return promise2(value1).then(value2 => {
+          return promise3(value1, value2)
+        })
+      })
+    }
+    // 使用promise.all避免深层嵌套
+    const makeRequest = () => {
+      return promise1().then(value1 => {
+        return Promise.all([value1, promise2(value1)])
+      }).then(([value1, value2]) => {
+        return promise3(value1, value2)
+      })
+    }
+    // 使用async await
+    const makeRequest = async () => {
+      const value1 = await promise1()
+      const value2 = await promise2(value1)
+      return promise3(value1, value2)
+    }
+    ```
+
+* eventLoop
+  * 因为js是一种单线程语言，如果遇到大量任务或者遇到一个耗时的任务，网页就会出现假死。eventLoop就是为了解决这种“堵塞”现象而提出的。
+  * eventLoop是一个程序结构，用于等待和发送消息和事件。
+  * 就是在程序中设置两个线程：一个负责程序本身的运行，称为“主线程”；另一个负责主线程与其他进程的通信（主要是各种io操作），成为“eventLoop线程”。
+
+* 设计模式
+* 树的算法
