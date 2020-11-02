@@ -168,8 +168,8 @@ export function queueWatcher (watcher: Watcher) {
     if (!flushing) {
       queue.push(watcher)
     } else {
-      // if already flushing, splice the watcher based on its id
-      // if already past its id, it will be run next immediately.
+      // if already flushing, splice the watcher based on its id如果已经刷新，则根据其id拼接监视器
+      // if already past its id, it will be run next immediately.如果已经超过了它的id，它将立即运行。
       let i = queue.length - 1
       while (i > index && queue[i].id > watcher.id) {
         i--

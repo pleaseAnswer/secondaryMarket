@@ -401,6 +401,16 @@ export function createPatchFunction (backend) {
     }
   }
 
+  // vnode的diff算法的主要逻辑
+  /**
+   * 1 分别位新旧vnode的头尾设置一个标记，循环遍历指导遍历完newVnodes|oldVnodes
+   * 2 if newStartVnode & oldStartVnode是同个vnode，就调用patchVnode，并把newStartVnode+1，oldStartVnode+1
+   * 3 if newEndVnode & oldEndVnode... 同2
+   * 4 if oldStartVnode & newEndVnode是同个vnode，调用patchVnode，分别对Idx做移位处理，并把oldStartVnode对应的真实dom移到右边
+   * 5 if newStartVnode & oldEndVnode...同4
+   * 6 循环结束，若oldStartIdx > oldEndIdx, 说明剩余的newVnode是多出来的，调用addVnode方法添加到文档中；
+   * 若newStartIdx > newEndIdx, 说明剩余的oldVnode是多余的，调用removeVnodes方法删除
+  */
   function updateChildren (parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly) {
     let oldStartIdx = 0
     let newStartIdx = 0
@@ -506,9 +516,7 @@ export function createPatchFunction (backend) {
     index,
     removeOnly
   ) {
-    if (oldVnode === vnode) {
-      return
-    }
+    if (oldVnode === vnode) return
 
     if (isDef(vnode.elm) && isDef(ownerArray)) {
       // clone reused vnode
@@ -552,16 +560,20 @@ export function createPatchFunction (backend) {
       if (isDef(i = data.hook) && isDef(i = i.update)) i(oldVnode, vnode)
     }
     if (isUndef(vnode.text)) {
+      // 1 若新老vnode都有子节点，则调用updateChildren方法进行diff，更新子节点
       if (isDef(oldCh) && isDef(ch)) {
         if (oldCh !== ch) updateChildren(elm, oldCh, ch, insertedVnodeQueue, removeOnly)
+        // 2 若只存在ch，则添加ch到父节点中
       } else if (isDef(ch)) {
         if (process.env.NODE_ENV !== 'production') {
           checkDuplicateKeys(ch)
         }
         if (isDef(oldVnode.text)) nodeOps.setTextContent(elm, '')
         addVnodes(elm, null, ch, 0, ch.length - 1, insertedVnodeQueue)
+        // 3 若自存在oldCh，则移除oldCh对应的节点
       } else if (isDef(oldCh)) {
         removeVnodes(oldCh, 0, oldCh.length - 1)
+        // 4 若都不存在，且oldVnode有text，则清空文本内容
       } else if (isDef(oldVnode.text)) {
         nodeOps.setTextContent(elm, '')
       }

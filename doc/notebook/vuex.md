@@ -23,51 +23,129 @@
     *2*. 不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。
 
 * 创建一个store -> 提供一个初始state对象和一些mutation
+* src > store > cart.js
 
 ```js
 import Vue from 'vue'
+// 1. 引入Vuex
 import Vuex from 'vuex'
 
+// 2. 使用(安装)Vuex
+Vue.use(Vuex);
+
+// 3. 实例化一个Store（一个应用只运行有一个Store）
 const store = new Vuex.Store({
     state: {
-        count: 0
+        goodsList: [{
+            id: '',
+            name: '',
+            price: '',
+            qty: ''
+        }]
     },
+    getters: {
+        totalPrice(state) {
+            return state.goodsList.reduce((prev, item) => prev + item.price * item.qty, 0)
+        }
+    }
+    // store.commit(mutation)
     mutations: {
-        increment (state) {
-            state.count++
+        removeFromCart(state, id) {
+            state.goodsList = state.goodsList.filter(item => item.id != id)
+        },
+        clearCart(state) {
+            state.goodsList = []
+        },
+        addCart(state, goods) {
+            state.goodsList.unshift(goods)
+        },
+        changeQty(state, payload) {
+            state.goodsList.forEach(item => {
+                if(item.id == payload.id) {
+                    item.qty = payload.qty
+                }
+            })
+        }
+    },
+    // 间接修改state的方法 store.dispatch(action)
+    actions: {
+        async changeQtyAsync(context, {id, qty}) {
+            let {data: {data}} = await
+            if(qty > data) {
+                qty = data;
+            }
+            context.commit('changeQty', {id, qty})
         }
     }
 })
+// 4. 把store导出并注入Vue实例
+// ！！！tip：注入vue实例
+export default store;
+
+// 5. 在组件中使用vuex
+// this.$store.state.count
 ```
 
-* 可以通过 store.state 来获取状态对象，以及通过 store.commit() 方法来触发状态变更
+* cart.vue
 
 ```js
-store.commit('increment')
-console.log(store.state.count) // -> 1
-```
-
-* 以 store 选项的方式向 vue 实例注入该 store 的机制
-
-```js
-new Vue({
-    el: '#app',
-    store
-})
+import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
+export default {
+    data() {return {}},
+    computed: {
+        // goodsList() {
+        //     return this.$store.state.goodsList
+        // }
+        // 可以通过 store.state 来获取状态对象
+        ...mapState({
+            goodsList(state) {
+                return state.goodsList
+            }
+        }),
+        // totalPrice() {
+        //     return this.$store.getters.totalPrice
+        // }
+        ...mapGetters(['totalPrice'])
+    },
+    methods: {
+        // removeItem(id) {
+        //     this.$store.commit('removeFromCart', id)
+        // }
+        // 通过 store.commit() 方法来触发状态变更
+        ...mapMutations({
+            removeItem: 'removeFromCart',
+            changeQty:(commit, payload)=> {
+                commit('changeQty',payload)
+            }
+        }),
+        // clearCart() {
+        //     this.$store.commit('clearCart')
+        // },
+        ...mapMutations(['clearCart']),
+        // changeQtyAsync(id, qty) {
+        //     this.$store.dispatch('changeQtyAsync', {id, qty})
+        // }
+        ...mapActions({
+            changeQtyAsync(dispatch, id, qty) {
+                dispatch('changeAtyAsync', {id, qty})
+            }
+        })
+    }
+}
 ```
 
 * eg: 从组件的方法提交一个变更
   
-> 通过提交 mutation 的方式，而非直接改变 store.state.count -> 为了更加明确地追踪到状态的变化
+  > 通过提交 mutation 的方式，而非直接改变 store.state.count -> 为了更加明确地追踪到状态的变化
 
-```js
-methods: {
-    increment() {
-        this.$store.commit('increment')
-        console.log(this.$store.state.count)
-    }
-}
-```
+  ```js
+  methods: {
+      increment() {
+          this.$store.commit('increment')
+          console.log(this.$store.state.count)
+      }
+  }
+  ```
 
 ## state
 
@@ -334,6 +412,11 @@ export default {
         ]),
         ...mapMutations({
             add: 'increment' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+        }),
+        ...mapMutations({
+            changeQty2:(commit, payload)=>{
+                commit('changeQty',payload)
+            }
         })
     }
 }
@@ -424,6 +507,11 @@ export default {
         ]),
         ...mapActions({
             add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+        }),
+        ...mapActions({
+            changeQtyAsync(dispatch, id, qty){
+                dispatch('changeQtyAsync', {id, qty})
+            }
         })
     }
 }
@@ -432,7 +520,7 @@ export default {
 
 ### 组合Action
 
-* store.dispatch可以处理倍触发的 action的处理函数返回的 Promise，并且store.dispatch 仍旧返回 Promise
+* store.dispatch可以处理被触发的 action的处理函数返回的 Promise，并且store.dispatch 仍旧返回 Promise
 
 ```js
 actions: {

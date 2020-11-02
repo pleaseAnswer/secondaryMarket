@@ -47,6 +47,7 @@ export function initLifecycle (vm: Component) {
   vm.$children = []
   vm.$refs = {}
 
+  // 标识位
   vm._watcher = null
   vm._inactive = null
   vm._directInactive = false
@@ -143,7 +144,16 @@ export function mountComponent (
   el: ?Element,
   hydrating?: boolean
 ): Component {
+  // 缓存el
   vm.$el = el
+  /**
+   * 1 判断是否有render函数
+   * 2 没有则直接把createEmptyVNode作为render函数
+   * 3 挂载beforeMount钩子
+   * 4 定义updateComponent，渲染相关
+   * 5 实例化一个渲染watcher
+   * 6 初始化时执行updateComponent函数
+   * */ 
   if (!vm.$options.render) {
     vm.$options.render = createEmptyVNode
     if (process.env.NODE_ENV !== 'production') {

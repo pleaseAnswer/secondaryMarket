@@ -16,10 +16,13 @@ export function initMixin (Vue: Class<Component>) {
   Vue.prototype._init = function (options?: Object) {
     const vm: Component = this
     // a uid
+    // 标明vue的id，可能有多个vue
     vm._uid = uid++
 
     let startTag, endTag
-    /* istanbul ignore if */
+    /* istanbul ignore if 
+    *  istanbul 是一款js代码覆盖率工具
+    */
     if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
       startTag = `vue-perf-start:${vm._uid}`
       endTag = `vue-perf-end:${vm._uid}`
@@ -27,12 +30,15 @@ export function initMixin (Vue: Class<Component>) {
     }
 
     // a flag to avoid this being observed
+    // 避免被观察到的一个标志
     vm._isVue = true
     // merge options
+    // 合并选项
     if (options && options._isComponent) {
       // optimize internal component instantiation
       // since dynamic options merging is pretty slow, and none of the
       // internal component options needs special treatment.
+      // 优化内部组件实例化的速度
       initInternalComponent(vm, options)
     } else {
       vm.$options = mergeOptions(
@@ -45,17 +51,27 @@ export function initMixin (Vue: Class<Component>) {
     if (process.env.NODE_ENV !== 'production') {
       initProxy(vm)
     } else {
+      // 渲染代理
       vm._renderProxy = vm
     }
     // expose real self
+    // 暴露真实的自己
     vm._self = vm
+    // 初始化生命周期
     initLifecycle(vm)
+    // 初始化事件机制
     initEvents(vm)
+    // 初始化渲染函数
     initRender(vm)
+    // beforeCreate钩子函数
     callHook(vm, 'beforeCreate')
+    // 在data/props之前解析注入项
     initInjections(vm) // resolve injections before data/props
+    // 初始化状态属性
+    // vm._watchers = []
     initState(vm)
     initProvide(vm) // resolve provide after data/props
+    // created钩子函数
     callHook(vm, 'created')
 
     /* istanbul ignore if */
@@ -64,7 +80,7 @@ export function initMixin (Vue: Class<Component>) {
       mark(endTag)
       measure(`vue ${vm._name} init`, startTag, endTag)
     }
-
+    // 如果有el选项就调用，没有就需要手动挂载
     if (vm.$options.el) {
       vm.$mount(vm.$options.el)
     }
@@ -88,10 +104,12 @@ export function initInternalComponent (vm: Component, options: InternalComponent
     opts.render = options.render
     opts.staticRenderFns = options.staticRenderFns
   }
-}
+} 
 
 export function resolveConstructorOptions (Ctor: Class<Component>) {
+  // 构造函数上是否有options选项？
   let options = Ctor.options
+  // 构造函数是否有父类？
   if (Ctor.super) {
     const superOptions = resolveConstructorOptions(Ctor.super)
     const cachedSuperOptions = Ctor.superOptions

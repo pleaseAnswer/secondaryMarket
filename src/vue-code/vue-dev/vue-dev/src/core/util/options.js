@@ -397,9 +397,11 @@ export function mergeOptions (
   if (typeof child === 'function') {
     child = child.options
   }
-
+  // 使所有props是标准化的基于对象的形式
   normalizeProps(child, vm)
+  // 使所有inject是标准化的基于对象的形式
   normalizeInject(child, vm)
+  // 使所有原始指令变为对象形式
   normalizeDirectives(child)
 
   // Apply extends and mixins on the child options,
@@ -428,6 +430,13 @@ export function mergeOptions (
     }
   }
   function mergeField (key) {
+    /**
+     * starts选择覆盖策略是一组函数，可以合并父选项的值和子选项的值变成一个最终的值
+     * 
+     * const defaultStart = function(parVal: any, chiVal: any): any {
+     *  return chiVal === undefined ? parVal : chiVal
+     * }
+    */
     const strat = strats[key] || defaultStrat
     options[key] = strat(parent[key], child[key], vm, key)
   }

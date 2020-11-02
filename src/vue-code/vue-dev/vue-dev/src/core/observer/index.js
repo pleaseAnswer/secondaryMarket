@@ -33,10 +33,12 @@ export function toggleObserving (value: boolean) {
  * object. Once attached, the observer converts the target
  * object's property keys into getter/setters that
  * collect dependencies and dispatch updates.
+ * 绑定观察对象并将观察者对象的属性转为setter/getter
  */
 export class Observer {
   value: any;
   dep: Dep;
+  // 实例对象的数量
   vmCount: number; // number of vms that have this object as root $data
 
   constructor (value: any) {
@@ -60,6 +62,7 @@ export class Observer {
    * Walk through all properties and convert them into
    * getter/setters. This method should only be called when
    * value type is Object.
+   * 遍历所有属性并将它们转换为getter/setter。此方法仅在值类型为Object时调用。
    */
   walk (obj: Object) {
     const keys = Object.keys(obj)
@@ -70,6 +73,7 @@ export class Observer {
 
   /**
    * Observe a list of Array items.
+   * 观察数组项列表。
    */
   observeArray (items: Array<any>) {
     for (let i = 0, l = items.length; i < l; i++) {
@@ -106,12 +110,17 @@ function copyAugment (target: Object, src: Object, keys: Array<string>) {
  * Attempt to create an observer instance for a value,
  * returns the new observer if successfully observed,
  * or the existing observer if the value already has one.
+ * 尝试为一个值创建一个观察者实例，如果成功观察到，返回新的观察者;
+ * 如果值已经有一个观察者，返回现有的观察者。
  */
 export function observe (value: any, asRootData: ?boolean): Observer | void {
+  // 如果value(data)不是一个对象或者是Vnode的一个实例
   if (!isObject(value) || value instanceof VNode) {
     return
   }
   let ob: Observer | void
+  // 如果value(data)有_ob_属性并且是Observer的一个实例
+  // 已被观察过
   if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
     ob = value.__ob__
   } else if (
@@ -131,6 +140,7 @@ export function observe (value: any, asRootData: ?boolean): Observer | void {
 
 /**
  * Define a reactive property on an Object.
+ * 定义对象上的响应性属性。
  */
 export function defineReactive (
   obj: Object,
@@ -197,6 +207,7 @@ export function defineReactive (
  * Set a property on an object. Adds the new property and
  * triggers change notification if the property doesn't
  * already exist.
+ * 在对象上设置属性。添加新属性，并在属性不存在时触发更改通知。
  */
 export function set (target: Array<any> | Object, key: any, val: any): any {
   if (process.env.NODE_ENV !== 'production' &&

@@ -9,6 +9,7 @@ let uid = 0
 /**
  * A dep is an observable that can have multiple
  * directives subscribing to it.
+ * dep是一个可以有多个指令订阅的可观察对象。
  */
 export default class Dep {
   static target: ?Watcher;
@@ -41,6 +42,7 @@ export default class Dep {
       // subs aren't sorted in scheduler if not running async
       // we need to sort them now to make sure they fire in correct
       // order
+      // 如果不运行异步subs没有排序，我们需要排序以确保他们在正确的顺序
       subs.sort((a, b) => a.id - b.id)
     }
     for (let i = 0, l = subs.length; i < l; i++) {

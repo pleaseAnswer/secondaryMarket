@@ -15,11 +15,13 @@ export function initExtend (Vue: GlobalAPI) {
 
   /**
    * Class inheritance
+   * 类继承
    */
   Vue.extend = function (extendOptions: Object): Function {
     extendOptions = extendOptions || {}
     const Super = this
     const SuperId = Super.cid
+    // 缓存构造函数对象
     const cachedCtors = extendOptions._Ctor || (extendOptions._Ctor = {})
     if (cachedCtors[SuperId]) {
       return cachedCtors[SuperId]
@@ -30,21 +32,26 @@ export function initExtend (Vue: GlobalAPI) {
       validateComponentName(name)
     }
 
+    // 001执行new Vue时
+    // 0011 创建一个空对象
     const Sub = function VueComponent (options) {
       this._init(options)
     }
+    // 0012 实例的_proto_指向原型对象 
+    // Sub.prototype._proto_ = Super.prototype
     Sub.prototype = Object.create(Super.prototype)
     Sub.prototype.constructor = Sub
     Sub.cid = cid++
+    // 合并 chiVal === undefined ? parVal : chiVal
     Sub.options = mergeOptions(
       Super.options,
       extendOptions
     )
+    // 在Sub上挂载super属性
     Sub['super'] = Super
 
-    // For props and computed properties, we define the proxy getters on
-    // the Vue instances at extension time, on the extended prototype. This
-    // avoids Object.defineProperty calls for each instance created.
+    // 对于props和computed属性，我们在扩展时在扩展原型上对Vue实例定义代理getter。
+    // 这避免了Object.defineProperty被创建的每个实例调用。
     if (Sub.options.props) {
       initProps(Sub)
     }
@@ -59,6 +66,7 @@ export function initExtend (Vue: GlobalAPI) {
 
     // create asset registers, so extended classes
     // can have their private assets too.
+    // 0013 this的属性依次复制
     ASSET_TYPES.forEach(function (type) {
       Sub[type] = Super[type]
     })
