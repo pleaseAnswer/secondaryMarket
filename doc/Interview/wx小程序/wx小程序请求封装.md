@@ -90,7 +90,7 @@ var host = 'http://localhost:8081/demo/';
 
 function request(url, postData, doSuccess, doFail) {
     wx.request({
-        url: host + host,
+        url: host + url,
         header: {
             "content-type": "application/json;chartset=UTF-8"
         },

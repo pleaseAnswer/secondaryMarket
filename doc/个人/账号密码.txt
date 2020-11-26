@@ -1,0 +1,109 @@
+SVN
+zhouyuexin  zyuexi200227
+
+GIT
+zhouyx yuexin123 
+
+山东待遇发放
+192.168.7.251:5010 root/Feicheng@0525
+/opt/hmykt/app/html
+manager Tecsun@2020
+
+新疆兵团
+http://192.168.1.55:85/#/login 
+ admin   Tecsun@2019
+
+新申领：654001197202053729
+
+光大
+wx5cee18cc8f86d135
+
+
+阿克苏
+192.168.1.38:83/#
+admin  Tecsun@2019
+
+清远生活号
+修改aAppid  正式环境
+X10351649	陈芷晴	441881201506100080
+X10370288	陈梦瑶	441881201511070162
+X10369391	梁楚琪	441881201505100302
+
+成人：
+姓名：肖开顺，身份证：51302819761114665X
+
+未成年人：
+姓名：谢晋海
+身份证：44188120100616001X
+社保卡号：R45678888
+金融卡号（后四位）：7458
+代办人：  罗九
+代办人身份证：441811197006156610
+
+营口
+http://192.168.7.251:1480/#/
+KJ852/123456
+
+大庆
+wxappid   wxe514b3daabf64f8d
+alipayappid    2019081266215218
+url /home/tecsun/html/alipay
+
+yth-weixin.e-tecsun.com/wechat
+
+微信公众号
+测试账号
+appid  wxaa6d22677b225e03
+appSecret   a29d0e074dd139cbf78b7e54e8981648
+URL http://yuexin.com
+Token 6868qaz12wsx12
+EncodingAESKey SnGquKDWABshdkaeDgbyLciGL5lbPeFn7EYXbhU4ZF9
+
+APPID wxf24564326765cbcd
+
+营口社保卡申领审核系统
+http://192.168.7.251:1480/applycard-service/doc.html
+KJ852  123456
+
+公主岭社保卡申领审核系统
+http://192.168.1.57:82/#/
+admin jlrs
+测试服务器用户名和密码：root/Tsun@020#$
+前端代码路径：/home/tecsun/html
+http://58.244.187.162:8888
+admin/tecsun@gzl020
+
+长垣用户中心
+http://192.168.1.195:8090/liangyz/zt-main-changyuan.git
+http://192.168.1.251:13012/doc.html
+http://192.168.1.251:18081/doc.html
+
+毕节人社云 -- 就业创业信息采集 -- 政务民生 -> 人力资源
+http://192.168.1.195:8090/root/bijieysp
+http://192.168.1.60:13012/doc.html
+账号：531102114@qq.com      
+密码：bijie123
+AppID(小程序ID)  wx2bb380a0c407ec34
+
+乐山小程序 -- 东至县劳动力信息采集 -- IT科技 -> 软件服务提供商
+http://192.168.1.195:8090/liangyz/yqwg-dong-zhi/tree/dev
+http://192.168.1.60:13012/doc.html
+账号：3233803324@qq.com
+密码：tecsunys321
+AppID(小程序ID)   wxf0928f5da080dd14
+
+河南长垣 
+http://192.168.1.195:8090/root/changyuanpc
+http://192.168.1.251:13012/doc.html
+http://192.168.1.252/#/login
+
+黑龙江
+http://192.168.1.153:86/#/
+http://60.219.211.77:86/#/
+cd /opt/apply/
+
+测试环境：http://192.168.1.71:82/#/login
+
+账号： hyr  / hyr123 ...
+
+

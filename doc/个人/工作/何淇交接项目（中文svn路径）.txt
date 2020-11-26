@@ -1,0 +1,25 @@
+待遇发放产品（PC、小程序、大屏）  http://192.168.1.195:8090/scaffolding/html.git
+
+西藏拉萨待遇发放（PC、大屏）   https://192.168.1.15/svn/TSSS/西藏/拉萨/惠民一卡通/trunk/src/PC
+
+新疆待遇发放 （PC）  https://192.168.1.15/svn/TSSS/新疆/兵团/惠民一卡通/社保卡一卡通应用服务平台项目/trunk/待遇发放-src/PC/Navigation-html
+
+吉林待遇发放（pc）  https://192.168.1.15/svn/TSSS/吉林/吉林/惠民一卡通/待遇发放项目/trunk/src/PC/Navigation-html
+
+吉林白山市待遇发放（pc）https://192.168.1.15/svn/TSSS/吉林/白山/惠民一卡通/待遇发放项目/trunk/src/PC/Navigation-html
+
+汕头待遇发放项目（pc） https://192.168.1.15/svn/TSSS/广东/汕头/惠民一卡通/待遇发放项目/trunk/src/PC
+
+山东待遇发放（pc） https://192.168.1.15/svn/TSSS/山东/泰安/惠民一卡通/待遇发放项目/trunk/src/PC/Navigation-html
+
+湛江待遇发放（pc、大屏）  https://192.168.1.15/svn/TSSS/广东/湛江/待遇发放/trunk/src/PC
+新的湛江项目  newzhanjiang文件夹   svn地址同上
+
+山西运城（pc） https://192.168.1.15/svn/TSSS/山西/运城/惠民一卡通/芮城县一卡通项目/trunk/src/PC
+
+光大银行小程序 192.168.1.15/svn/TSSS/广东/广州/卡管/光大银行卡管系统/trunk/src/PC
+
+实名农户项目  https://192.168.1.15/svn/TSCP/实名农户/trunk/smnhshop
+
+liya/Liya29118502@
+
