@@ -6,6 +6,11 @@
 
 ![1608022120031](C:\Users\ADMINI~1\AppData\Local\Temp\1608022120031.png)
 
+#### 在MongoDB安装目录下新建文件夹
+
+* data文件夹
+* log文件夹
+
 #### 在MongoDB安装目录下新建mongo.config配置文件并配置以下内容
 
 > dbpath=D:\mongodb\data
